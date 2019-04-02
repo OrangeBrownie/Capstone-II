@@ -1,908 +1,908 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="csrf-token" content="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
+  <meta name="csrf-token" content="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
 
-    <title>FormRead</title>
-    <link rel="shortcut icon" href="http://formread.org/app/images/fr.ico">
-    <!-- jQuery -->
-    <script src="http://formread.org/app/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <link href="http://formread.org/app/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="http://formread.org/app/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="http://formread.org/app/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="http://formread.org/app/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- bootstrap-wysiwyg -->
-    <link href="http://formread.org/app/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
-    <!-- Select2 -->
-    <link href="http://formread.org/app/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
-    <!-- Switchery -->
-    <link href="http://formread.org/app/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
-    <!-- starrr -->
-    <link href="http://formread.org/app/vendors/starrr/dist/starrr.css" rel="stylesheet">
-    <!-- bootstrap-daterangepicker -->
-    <link href="http://formread.org/app/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="http://formread.org/app/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="http://formread.org/app/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-    <!-- Custom Theme Style -->
-    <link href="http://formread.org/app/build/css/custom.min.css" rel="stylesheet">
+  <title>FormRead</title>
+  <link rel="shortcut icon" href="http://formread.org/app/images/fr.ico">
+  <!-- jQuery -->
+  <script src="http://formread.org/app/vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link href="http://formread.org/app/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="http://formread.org/app/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="http://formread.org/app/vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="http://formread.org/app/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  <!-- bootstrap-wysiwyg -->
+  <link href="http://formread.org/app/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+  <!-- Select2 -->
+  <link href="http://formread.org/app/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+  <!-- Switchery -->
+  <link href="http://formread.org/app/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+  <!-- starrr -->
+  <link href="http://formread.org/app/vendors/starrr/dist/starrr.css" rel="stylesheet">
+  <!-- bootstrap-daterangepicker -->
+  <link href="http://formread.org/app/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+  <!-- bootstrap-progressbar -->
+  <link href="http://formread.org/app/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="http://formread.org/app/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+  <!-- Custom Theme Style -->
+  <link href="http://formread.org/app/build/css/custom.min.css" rel="stylesheet">
 
-        <!-- Datatables -->
-    <link href="http://formread.org/app/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="http://formread.org/app/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="http://formread.org/app/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="http://formread.org/app/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="http://formread.org/app/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+  <!-- Datatables -->
+  <link href="http://formread.org/app/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+  <link href="http://formread.org/app/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+  <link href="http://formread.org/app/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+  <link href="http://formread.org/app/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+  <link href="http://formread.org/app/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
 
-    <style>
+  <style>
 
-        .circle {
-           background-color: rgba(0,0,0,0);
-           border: 5px solid rgba(0,183,229,0.9);
-           opacity: .9;
-           border-right: 5px solid rgba(0,0,0,0);
-           border-left: 5px solid rgba(0,0,0,0);
-           border-radius: 50px;
-           box-shadow: 0 0 35px #2187e7;
-           width: 50px;
-           height: 50px;
-           margin: 0 auto;
-           -moz-animation: spinPulse 1s infinite ease-in-out;
-           -webkit-animation: spinPulse 1s infinite linear;
-       }
+    .circle {
+     background-color: rgba(0,0,0,0);
+     border: 5px solid rgba(0,183,229,0.9);
+     opacity: .9;
+     border-right: 5px solid rgba(0,0,0,0);
+     border-left: 5px solid rgba(0,0,0,0);
+     border-radius: 50px;
+     box-shadow: 0 0 35px #2187e7;
+     width: 50px;
+     height: 50px;
+     margin: 0 auto;
+     -moz-animation: spinPulse 1s infinite ease-in-out;
+     -webkit-animation: spinPulse 1s infinite linear;
+   }
 
-       .circle1 {
-           background-color: rgba(0,0,0,0);
-           border: 5px solid rgba(0,183,229,0.9);
-           opacity: .9;
-           border-left: 5px solid rgba(0,0,0,0);
-           border-right: 5px solid rgba(0,0,0,0);
-           border-radius: 50px;
-           box-shadow: 0 0 15px #2187e7;
-           width: 30px;
-           height: 30px;
-           margin: 0 auto;
-           position: relative;
-           top: -40px;
-           -moz-animation: spinoffPulse 1s infinite linear;
-           -webkit-animation: spinoffPulse 1s infinite linear;
-       }
+   .circle1 {
+     background-color: rgba(0,0,0,0);
+     border: 5px solid rgba(0,183,229,0.9);
+     opacity: .9;
+     border-left: 5px solid rgba(0,0,0,0);
+     border-right: 5px solid rgba(0,0,0,0);
+     border-radius: 50px;
+     box-shadow: 0 0 15px #2187e7;
+     width: 30px;
+     height: 30px;
+     margin: 0 auto;
+     position: relative;
+     top: -40px;
+     -moz-animation: spinoffPulse 1s infinite linear;
+     -webkit-animation: spinoffPulse 1s infinite linear;
+   }
 
-       @-moz-keyframes spinPulse {
-           0% {
-               -moz-transform: rotate(160deg);
-               opacity: 0;
-               box-shadow: 0 0 1px #2187e7;
-           }
+   @-moz-keyframes spinPulse {
+     0% {
+       -moz-transform: rotate(160deg);
+       opacity: 0;
+       box-shadow: 0 0 1px #2187e7;
+     }
 
-           50% {
-               -moz-transform: rotate(145deg);
-               opacity: 1;
-           }
+     50% {
+       -moz-transform: rotate(145deg);
+       opacity: 1;
+     }
 
-           100% {
-               -moz-transform: rotate(-320deg);
-               opacity: 0;
-           };
-       }
+     100% {
+       -moz-transform: rotate(-320deg);
+       opacity: 0;
+     };
+   }
 
-       @-moz-keyframes spinoffPulse {
-           0% {
-               -moz-transform: rotate(0deg);
-           }
+   @-moz-keyframes spinoffPulse {
+     0% {
+       -moz-transform: rotate(0deg);
+     }
 
-           100% {
-               -moz-transform: rotate(360deg);
-           };
-       }
+     100% {
+       -moz-transform: rotate(360deg);
+     };
+   }
 
-       @-webkit-keyframes spinPulse {
-           0% {
-               -webkit-transform: rotate(160deg);
-               opacity: 0;
-               box-shadow: 0 0 1px #2187e7;
-           }
+   @-webkit-keyframes spinPulse {
+     0% {
+       -webkit-transform: rotate(160deg);
+       opacity: 0;
+       box-shadow: 0 0 1px #2187e7;
+     }
 
-           50% {
-               -webkit-transform: rotate(145deg);
-               opacity: 1;
-           }
+     50% {
+       -webkit-transform: rotate(145deg);
+       opacity: 1;
+     }
 
-           100% {
-               -webkit-transform: rotate(-320deg);
-               opacity: 0;
-           };
-       }
+     100% {
+       -webkit-transform: rotate(-320deg);
+       opacity: 0;
+     };
+   }
 
-       @-webkit-keyframes spinoffPulse {
-           0% {
-               -webkit-transform: rotate(0deg);
-           }
+   @-webkit-keyframes spinoffPulse {
+     0% {
+       -webkit-transform: rotate(0deg);
+     }
 
-           100% {
-               -webkit-transform: rotate(360deg);
-           };
-       }
+     100% {
+       -webkit-transform: rotate(360deg);
+     };
+   }
 
-    </style>
-    <style>
-      .floatr {
-          float: right;
-      }
-    </style>
-    <script>
-        window.Laravel = {"csrfToken":"OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP"};
-    </script>
-  </head>
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="http://formread.org/app/dashboard" class="site_title"><i class="fa fa-print"></i> <span>FormRead</span></a>
+ </style>
+ <style>
+  .floatr {
+    float: right;
+  }
+</style>
+<script>
+  window.Laravel = {"csrfToken":"OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP"};
+</script>
+</head>
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="http://formread.org/app/dashboard" class="site_title"><i class="fa fa-print"></i> <span>FormRead</span></a>
+          </div>
+
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="http://formread.org/app/images\user.png" class="img-circle profile_img">
             </div>
-
+            <div class="profile_info">
+              <span>Welcome,</span>
+              <h2>Genilo</h2>
+            </div>
             <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-              <div class="profile_pic">
-                                      <img src="http://formread.org/app/images\user.png" class="img-circle profile_img">
-                                </div>
-              <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>Genilo</h2>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-            <!-- /menu profile quick info -->
-            <br />
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                <ul class="nav side-menu">
-                  <li><a href="http://formread.org/app/profile"><i class="fa fa-user"></i>Profile</a></li>
-                  <li><a><i class="fa fa-edit"></i>Forms<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="http://formread.org/app/updateform">Edit Form</a></li>
-                      <li><a href="https://youtu.be/X-jZkB_uSP8" target="_blank">Tutorial</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-table"></i> Forms Processing <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="http://formread.org/app/readform">Your Forms</a></li>
-                      <li><a href="https://youtu.be/xpyrcvHKP4c" target="_blank">Tutorial</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-graduation-cap"></i> Classroom <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="http://formread.org/app/myClasses">My Classrooms</a></li>
-                      <li><a href="#" target="_blank">Tutorial</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-download"></i> Downloads <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="http://formread.org/app/templates">Forms Templates</a></li>
-                      <li><a href="http://formread.org/app/software">Useful Things</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="http://formread.org/app/OCR-language"><i class="fa fa-language"></i> Install OCR Language</a></li>
-                  <li><a href="http://formread.org/app/donate"><i class="fa fa-thumbs-o-up"></i> DONATE</a></li>
+          </div>
+          <!-- /menu profile quick info -->
+          <br />
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <ul class="nav side-menu">
+              <li><a href="http://formread.org/app/profile"><i class="fa fa-user"></i>Profile</a></li>
+              <li><a><i class="fa fa-edit"></i>Forms<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="http://formread.org/app/updateform">Edit Form</a></li>
+                  <li><a href="https://youtu.be/X-jZkB_uSP8" target="_blank">Tutorial</a></li>
                 </ul>
-            </div>
-            <!-- /sidebar menu -->
-
-            <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen" class="menu_toggle">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-                <form id="logout-form" action="http://formread.org/app/logout" method="POST" style="display: none;">
-                    <input type="hidden" name="_token" value="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
-                </form>
-            </div>
-            <!-- /menu footer buttons -->
+              </li>
+              <li><a><i class="fa fa-table"></i> Forms Processing <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="http://formread.org/app/readform">Your Forms</a></li>
+                  <li><a href="https://youtu.be/xpyrcvHKP4c" target="_blank">Tutorial</a></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-graduation-cap"></i> Classroom <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="http://formread.org/app/myClasses">My Classrooms</a></li>
+                  <li><a href="#" target="_blank">Tutorial</a></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-download"></i> Downloads <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="http://formread.org/app/templates">Forms Templates</a></li>
+                  <li><a href="http://formread.org/app/software">Useful Things</a></li>
+                </ul>
+              </li>
+              <li><a href="http://formread.org/app/OCR-language"><i class="fa fa-language"></i> Install OCR Language</a></li>
+              <li><a href="http://formread.org/app/donate"><i class="fa fa-thumbs-o-up"></i> DONATE</a></li>
+            </ul>
           </div>
-        </div>
+          <!-- /sidebar menu -->
 
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                  <a id="menu_toggle" class="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
-              <ul class="nav navbar-nav navbar-right floatr">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                          <img src="http://formread.org/app/images\user.png" alt="">
-                                        Genilo
-                    <span class=" fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="http://formread.org/app/profile"> Profile</a></li>
-                    <li><a href="http://formread.org/app/forum">Help</a></li>
-                    <li>
-                        <a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" ><i class="fa fa-sign-out pull-right"></i> Log Out</a>
-                        <form id="logout-form" action="http://formread.org/app/logout" method="POST" style="display: none;">
-                            <input type="hidden" name="_token" value="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
-                        </form>
-                    </li>
-                  </ul>
-                </li>
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    en                    <span class=" fa fa-angle-down"></span>
-                  </a>
-                  <ul class="dropdown-menu ">
-                    <li><a href="http://formread.org/app/lang/en">English</a></li>
-                    <li><a href="http://formread.org/app/lang/es">Español</a></li>
-                    <li><a href="http://formread.org/app/lang/pt">Português</a></li>
-                    <li><a href="http://formread.org/app/lang/fr">Français</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- /top navigation -->
-
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-                        <div id="results" hidden>
-    <button type="button" id="settable">Set Tables</button>
-    <button type="button" id="gradeImg" class="cutting" hidden="">Grade Image</button>
-    <div class="x_panel">
-      <div class="x_title">
-        <h2>OMR <small>Results</small></h2>
-        <div class="clearfix"></div>
-      </div>
-      <div class="x_content">
-        <table id="datatable-buttons2" class="table table-striped table-bordered dataTable datatable-buttons">
-          <thead>
-            <tr id="resultsFormOmrHead">
-              <th>ID</th>
-            </tr>
-          </thead>
-          <tbody id="resultsFormOmrBody">
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="x_panel" id='qr_table'>
-      <div class="x_title">
-        <h2>QR CODE <small>Results</small></h2>
-        <div class="clearfix"></div>
-      </div>
-      <div class="x_content">
-        <table id="datatable-buttons3" class="table table-striped table-bordered dataTable datatable-buttons">
-          <thead>
-            <tr id="resultsFormBcrHead">
-            </tr>
-          </thead>
-          <tbody id="resultsFormBcrBody">
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="x_panel" id='ocr_table'>
-      <div class="x_title">
-        <h2>OCR <small>Results</small></h2>
-        <div class="clearfix"></div>
-      </div>
-      <div class="x_content">
-        <table id="datatable-buttons1" class="table table-striped table-bordered dataTable datatable-buttons">
-          <thead>
-            <tr id="resultsFormOcrHead">
-            </tr>
-          </thead>
-          <tbody id="resultsFormOcrBody">
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="x_panel cutting" id='img_table' hidden>
-      <div class="x_title">
-        <h2>IMG <small>Results</small></h2>
-        <div class="clearfix"></div>
-      </div>
-      <div class="x_content">
-        <table id="datatable-buttons4" class="table table-striped table-bordered dataTable datatable-buttons">
-          <thead>
-            <tr id="resultsFormImgHead">
-            </tr>
-          </thead>
-          <tbody id="resultsFormImgBody">
-
-          </tbody>
-        </table>
-      </div>
-    </div>
-    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true"  id="modal_cuttings" >
-      <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <form action="javascript:gradeImage2();">
-                <div class="modal-header">
-                  <h4 class="modal-title" id="myModalLabel2">IMG</h4>
-                </div>
-                <div class="modal-body">
-                  <div class="form-group">
-                      <div align="center"><img id="temp_img" style="max-width: 800px;"></div>
-                      <input id="gradeImage" type="text" class="form-control" name="gradeImage" autofocus placeholder="Grade Image" required>
-                   </div>
-                </div>
-                <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary">Grade Image</button>
-                </div>
+          <!-- /menu footer buttons -->
+          <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen" class="menu_toggle">
+              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+              <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+            <form id="logout-form" action="http://formread.org/app/logout" method="POST" style="display: none;">
+              <input type="hidden" name="_token" value="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
             </form>
+          </div>
+          <!-- /menu footer buttons -->
         </div>
       </div>
-    </div>
-</div>
-<div id="files_input">
-    Images Files<input type="file" id="files" name="files[]" multiple accept=".png, .jpeg, .jpg"/>
-    PDF File<input id='pdf' type='file' accept=".pdf"/>
-</div>
 
-<div id="redForm_run" hidden>
-  <div class="row">
-    <div class="form-group col-lg-2" align="center">
-      <br>
-      <a id="run" class="btn btn-app">
-        <i class="fa fa-print"></i> FormRead
-      </a>
-    </div>
-    <div class="form-group col-lg-2" align="center">
-    <h2>Mark Darkness</h2> <input type="number" min="0" max="100" id="darkness" value="30" class="form-control">
-    </div>
-    <div class="form-group col-lg-3" align="center">
-      <h2>OCR Language</h2> <select id="langsel" class="form-control" onchange="window.lastFile && recognizeFile(window.lastFile)">
-         <option value='afr'     > Afrikaans             </option>
-         <option value='ara'     > Arabic                </option>
-         <option value='aze'     > Azerbaijani           </option>
-         <option value='bel'     > Belarusian            </option>
-         <option value='ben'     > Bengali               </option>
-         <option value='bul'     > Bulgarian             </option>
-         <option value='cat'     > Catalan               </option>
-         <option value='ces'     > Czech                 </option>
-         <option value='chi_sim' > Chinese               </option>
-         <option value='chi_tra' > Traditional Chinese   </option>
-         <option value='chr'     > Cherokee              </option>
-         <option value='dan'     > Danish                </option>
-         <option value='deu'     > German                </option>
-         <option value='ell'     > Greek                 </option>
-         <option value='eng'     selected> English                </option>
-         <option value='enm'     > English (Old)         </option>
-         <option value='meme'     > Internet Meme                </option>
-         <option value='epo'     > Esperanto             </option>
-         <option value='epo_alt' > Esperanto alternative </option>
-         <option value='equ'     > Math                  </option>
-         <option value='est'     > Estonian              </option>
-         <option value='eus'     > Basque                </option>
-         <option value='fin'     > Finnish               </option>
-         <option value='fra'     > French                </option>
-         <option value='frk'     > Frankish              </option>
-         <option value='frm'     > French (Old)          </option>
-         <option value='glg'     > Galician              </option>
-         <option value='grc'     > Ancient Greek         </option>
-         <option value='heb'     > Hebrew                </option>
-         <option value='hin'     > Hindi                 </option>
-         <option value='hrv'     > Croatian              </option>
-         <option value='hun'     > Hungarian             </option>
-         <option value='ind'     > Indonesian            </option>
-         <option value='isl'     > Icelandic             </option>
-         <option value='ita'     > Italian               </option>
-         <option value='ita_old' > Italian (Old)         </option>
-         <option value='jpn'     > Japanese              </option>
-         <option value='kan'     > Kannada               </option>
-         <option value='kor'     > Korean                </option>
-         <option value='lav'     > Latvian               </option>
-         <option value='lit'     > Lithuanian            </option>
-         <option value='mal'     > Malayalam             </option>
-         <option value='mkd'     > Macedonian            </option>
-         <option value='mlt'     > Maltese               </option>
-         <option value='msa'     > Malay                 </option>
-         <option value='nld'     > Dutch                 </option>
-         <option value='nor'     > Norwegian             </option>
-         <option value='pol'     > Polish                </option>
-         <option value='por'     > Portuguese            </option>
-         <option value='ron'     > Romanian              </option>
-         <option value='rus'     > Russian               </option>
-         <option value='slk'     > Slovakian             </option>
-         <option value='slv'     > Slovenian             </option>
-         <option value='spa'     > Spanish               </option>
-         <option value='spa_old' > Old Spanish           </option>
-         <option value='sqi'     > Albanian              </option>
-         <option value='srp'     > Serbian (Latin)       </option>
-         <option value='swa'     > Swahili               </option>
-         <option value='swe'     > Swedish               </option>
-         <option value='tam'     > Tamil                 </option>
-         <option value='tel'     > Telugu                </option>
-         <option value='tgl'     > Tagalog               </option>
-         <option value='tha'     > Thai                  </option>
-         <option value='tur'     > Turkish               </option>
-         <option value='ukr'     > Ukrainian             </option>
-         <option value='vie'     > Vietnamese            </option>
-      </select>
-    </div>
-    <div class="form-group col-lg-3" align="center">
-      <h2>Threshold <a id="see_threshold"><span class="fa fa-eye"></span></a><a id="hide_threshold" hidden><span class="fa fa-eye-slash" hidden></span></a></h2><input type="range" min="1" max="255" id="threshold" value="147" class="form-control"><span id="thresholdValue"></span>
-    </div>
-  </div>
-</div>
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle">
+              <a id="menu_toggle" class="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right floatr">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <img src="http://formread.org/app/images\user.png" alt="">
+                  Genilo
+                  <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li><a href="http://formread.org/app/profile"> Profile</a></li>
+                  <li><a href="http://formread.org/app/forum">Help</a></li>
+                  <li>
+                    <a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" ><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <form id="logout-form" action="http://formread.org/app/logout" method="POST" style="display: none;">
+                      <input type="hidden" name="_token" value="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  en                    <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu ">
+                  <li><a href="http://formread.org/app/lang/en">English</a></li>
+                  <li><a href="http://formread.org/app/lang/es">Español</a></li>
+                  <li><a href="http://formread.org/app/lang/pt">Português</a></li>
+                  <li><a href="http://formread.org/app/lang/fr">Français</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation -->
 
-<canvas id="threshold_canvas" width="300" height="300" style="z-index:1" hidden></canvas>
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          <div id="results" hidden>
+            <button type="button" id="settable">Set Tables</button>
+            <button type="button" id="gradeImg" class="cutting" hidden="">Grade Image</button>
+            <div class="x_panel">
+              <div class="x_title">
+                <h2>OMR <small>Results</small></h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <table id="datatable-buttons2" class="table table-striped table-bordered dataTable datatable-buttons">
+                  <thead>
+                    <tr id="resultsFormOmrHead">
+                      <th>ID</th>
+                    </tr>
+                  </thead>
+                  <tbody id="resultsFormOmrBody">
 
-<div id="preview">
-    <output id="list"></output><br>
-    <output id="list2"></output><br>
-    <div id="status"></div>
-</div>
-<p id="demo"></p>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="x_panel" id='qr_table'>
+              <div class="x_title">
+                <h2>QR CODE <small>Results</small></h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <table id="datatable-buttons3" class="table table-striped table-bordered dataTable datatable-buttons">
+                  <thead>
+                    <tr id="resultsFormBcrHead">
+                    </tr>
+                  </thead>
+                  <tbody id="resultsFormBcrBody">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="x_panel" id='ocr_table'>
+              <div class="x_title">
+                <h2>OCR <small>Results</small></h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <table id="datatable-buttons1" class="table table-striped table-bordered dataTable datatable-buttons">
+                  <thead>
+                    <tr id="resultsFormOcrHead">
+                    </tr>
+                  </thead>
+                  <tbody id="resultsFormOcrBody">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="x_panel cutting" id='img_table' hidden>
+              <div class="x_title">
+                <h2>IMG <small>Results</small></h2>
+                <div class="clearfix"></div>
+              </div>
+              <div class="x_content">
+                <table id="datatable-buttons4" class="table table-striped table-bordered dataTable datatable-buttons">
+                  <thead>
+                    <tr id="resultsFormImgHead">
+                    </tr>
+                  </thead>
+                  <tbody id="resultsFormImgBody">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-hidden="true"  id="modal_cuttings" >
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                  <form action="javascript:gradeImage2();">
+                    <div class="modal-header">
+                      <h4 class="modal-title" id="myModalLabel2">IMG</h4>
+                    </div>
+                    <div class="modal-body">
+                      <div class="form-group">
+                        <div align="center"><img id="temp_img" style="max-width: 800px;"></div>
+                        <input id="gradeImage" type="text" class="form-control" name="gradeImage" autofocus placeholder="Grade Image" required>
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="submit" class="btn btn-primary">Grade Image</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="files_input">
+            Images Files<input type="file" id="files" name="files[]" multiple accept=".png, .jpeg, .jpg"/>
+            PDF File<input id='pdf' type='file' accept=".pdf"/>
+          </div>
+
+          <div id="redForm_run" hidden>
+            <div class="row">
+              <div class="form-group col-lg-2" align="center">
+                <br>
+                <a id="run" class="btn btn-app">
+                  <i class="fa fa-print"></i> FormRead
+                </a>
+              </div>
+              <div class="form-group col-lg-2" align="center">
+                <h2>Mark Darkness</h2> <input type="number" min="0" max="100" id="darkness" value="30" class="form-control">
+              </div>
+              <div class="form-group col-lg-3" align="center">
+                <h2>OCR Language</h2> <select id="langsel" class="form-control" onchange="window.lastFile && recognizeFile(window.lastFile)">
+                 <option value='afr'     > Afrikaans             </option>
+                 <option value='ara'     > Arabic                </option>
+                 <option value='aze'     > Azerbaijani           </option>
+                 <option value='bel'     > Belarusian            </option>
+                 <option value='ben'     > Bengali               </option>
+                 <option value='bul'     > Bulgarian             </option>
+                 <option value='cat'     > Catalan               </option>
+                 <option value='ces'     > Czech                 </option>
+                 <option value='chi_sim' > Chinese               </option>
+                 <option value='chi_tra' > Traditional Chinese   </option>
+                 <option value='chr'     > Cherokee              </option>
+                 <option value='dan'     > Danish                </option>
+                 <option value='deu'     > German                </option>
+                 <option value='ell'     > Greek                 </option>
+                 <option value='eng'     selected> English                </option>
+                 <option value='enm'     > English (Old)         </option>
+                 <option value='meme'     > Internet Meme                </option>
+                 <option value='epo'     > Esperanto             </option>
+                 <option value='epo_alt' > Esperanto alternative </option>
+                 <option value='equ'     > Math                  </option>
+                 <option value='est'     > Estonian              </option>
+                 <option value='eus'     > Basque                </option>
+                 <option value='fin'     > Finnish               </option>
+                 <option value='fra'     > French                </option>
+                 <option value='frk'     > Frankish              </option>
+                 <option value='frm'     > French (Old)          </option>
+                 <option value='glg'     > Galician              </option>
+                 <option value='grc'     > Ancient Greek         </option>
+                 <option value='heb'     > Hebrew                </option>
+                 <option value='hin'     > Hindi                 </option>
+                 <option value='hrv'     > Croatian              </option>
+                 <option value='hun'     > Hungarian             </option>
+                 <option value='ind'     > Indonesian            </option>
+                 <option value='isl'     > Icelandic             </option>
+                 <option value='ita'     > Italian               </option>
+                 <option value='ita_old' > Italian (Old)         </option>
+                 <option value='jpn'     > Japanese              </option>
+                 <option value='kan'     > Kannada               </option>
+                 <option value='kor'     > Korean                </option>
+                 <option value='lav'     > Latvian               </option>
+                 <option value='lit'     > Lithuanian            </option>
+                 <option value='mal'     > Malayalam             </option>
+                 <option value='mkd'     > Macedonian            </option>
+                 <option value='mlt'     > Maltese               </option>
+                 <option value='msa'     > Malay                 </option>
+                 <option value='nld'     > Dutch                 </option>
+                 <option value='nor'     > Norwegian             </option>
+                 <option value='pol'     > Polish                </option>
+                 <option value='por'     > Portuguese            </option>
+                 <option value='ron'     > Romanian              </option>
+                 <option value='rus'     > Russian               </option>
+                 <option value='slk'     > Slovakian             </option>
+                 <option value='slv'     > Slovenian             </option>
+                 <option value='spa'     > Spanish               </option>
+                 <option value='spa_old' > Old Spanish           </option>
+                 <option value='sqi'     > Albanian              </option>
+                 <option value='srp'     > Serbian (Latin)       </option>
+                 <option value='swa'     > Swahili               </option>
+                 <option value='swe'     > Swedish               </option>
+                 <option value='tam'     > Tamil                 </option>
+                 <option value='tel'     > Telugu                </option>
+                 <option value='tgl'     > Tagalog               </option>
+                 <option value='tha'     > Thai                  </option>
+                 <option value='tur'     > Turkish               </option>
+                 <option value='ukr'     > Ukrainian             </option>
+                 <option value='vie'     > Vietnamese            </option>
+               </select>
+             </div>
+             <div class="form-group col-lg-3" align="center">
+              <h2>Threshold <a id="see_threshold"><span class="fa fa-eye"></span></a><a id="hide_threshold" hidden><span class="fa fa-eye-slash" hidden></span></a></h2><input type="range" min="1" max="255" id="threshold" value="147" class="form-control"><span id="thresholdValue"></span>
+            </div>
+          </div>
+        </div>
+
+        <canvas id="threshold_canvas" width="300" height="300" style="z-index:1" hidden></canvas>
+
+        <div id="preview">
+          <output id="list"></output><br>
+          <output id="list2"></output><br>
+          <div id="status"></div>
+        </div>
+        <p id="demo"></p>
 
         <div class="modal" id="loading">
-                <br><br><br><br><br><br><br><br><br>
-                <div class="circle"></div>
-                <div class="circle1"></div>
+          <br><br><br><br><br><br><br><br><br>
+          <div class="circle"></div>
+          <div class="circle1"></div>
         </div>
 
-<script type="text/javascript" src="http://formread.org/app/js/dtables.js?t=17175"></script>
-<script src="http://formread.org/app/js/qcode-decoder.min.js"></script>
-<script src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.7/dist/tesseract.js"></script>
-<script src="http://formread.org/app/js/ocrad.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing-api.min.js"></script>
-<script type="text/javascript" src="http://formread.org/app/js/pdfjs/build/pdf.js"></script>
-<script src="http://formread.org/app/js/jsQR.js"></script>
-<script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
-<script>
-    $body = $("body");
-    $(document).on({
-        ajaxStart: function() { $body.addClass("loading");    },
-         ajaxStop: function() { $body.removeClass("loading"); }
-    });
+        <script type="text/javascript" src="http://formread.org/app/js/dtables.js?t=17175"></script>
+        <script src="http://formread.org/app/js/qcode-decoder.min.js"></script>
+        <script src="https://cdn.rawgit.com/naptha/tesseract.js/1.0.7/dist/tesseract.js"></script>
+        <script src="http://formread.org/app/js/ocrad.min.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing-api.min.js"></script>
+        <script type="text/javascript" src="http://formread.org/app/js/pdfjs/build/pdf.js"></script>
+        <script src="http://formread.org/app/js/jsQR.js"></script>
+        <script src="https://cdn.rawgit.com/serratus/quaggaJS/0420d5e0/dist/quagga.min.js"></script>
+        <script>
+          $body = $("body");
+          $(document).on({
+            ajaxStart: function() { $body.addClass("loading");    },
+            ajaxStop: function() { $body.removeClass("loading"); }
+          });
     /*$(function () {
         $('.modal').modal({
             show: false,
             keyboard: false,
             backdrop: 'static'
         });
-    });*/
+      });*/
       // Check for the various File API support.
-    if (window.File && window.FileReader && window.FileList && window.Blob) {
-    } else {
-      alert('The File APIs are not fully supported in this browser.');
-    }
-    var ctx;
-    var imageURLs=[];
-    document.getElementById('files').addEventListener('change', handleFileSelect, false);
-    document.getElementById('pdf').addEventListener('change', handleFileSelectPdf);
-    document.getElementById('run').addEventListener('click', read);
-    var imgs=[];
-    var relativeCoord = [];
-    var MAX_RATIO_A4 = 0.728;
-    var MIN_RATIO_A4 = 0.704;
-    var MAX_RATIO_LETTER = 0.776;
-    var MIN_RATIO_LETTER = 0.768;
-    var threshold_canvas = document.getElementById('threshold_canvas');
-    var threshold_ctx;
-    var threshold_img = new Image;
-    var storeOmrImgRoute = "http://formread.org/app/storeOmrImg";
-    var updateUsageRoute = "http://formread.org/app/updateUsage";
-    var darkn = document.getElementById("darkness").value;
-    $('#thresholdValue').html(threshold);
-    $('#gradeImg').click(function() {
-      gradeImage();
-    });
-    $('#see_threshold').click(function() {
-      $('#see_threshold').hide();
-      $('#hide_threshold').show();
-      $('#threshold_canvas').show();
-    });
-    $('#hide_threshold').click(function() {
-      $('#see_threshold').show();
-      $('#hide_threshold').hide();
-      $('#threshold_canvas').hide();
-    });
-    $('#threshold').change(function() {
-      threshold=$('#threshold').val();
+      if (window.File && window.FileReader && window.FileList && window.Blob) {
+      } else {
+        alert('The File APIs are not fully supported in this browser.');
+      }
+      var ctx;
+      var imageURLs=[];
+      document.getElementById('files').addEventListener('change', handleFileSelect, false);
+      document.getElementById('pdf').addEventListener('change', handleFileSelectPdf);
+      document.getElementById('run').addEventListener('click', read);
+      var imgs=[];
+      var relativeCoord = [];
+      var MAX_RATIO_A4 = 0.728;
+      var MIN_RATIO_A4 = 0.704;
+      var MAX_RATIO_LETTER = 0.776;
+      var MIN_RATIO_LETTER = 0.768;
+      var threshold_canvas = document.getElementById('threshold_canvas');
+      var threshold_ctx;
+      var threshold_img = new Image;
+      var storeOmrImgRoute = "http://formread.org/app/storeOmrImg";
+      var updateUsageRoute = "http://formread.org/app/updateUsage";
+      var darkn = document.getElementById("darkness").value;
       $('#thresholdValue').html(threshold);
-      threshold_img = document.getElementsByName('forms')[0];
-      threshold_ctx = threshold_canvas.getContext("2d");
-      threshold_ctx.clearRect(0, 0, threshold_canvas.width, threshold_canvas.height);
-      threshold_canvas.width = threshold_img.width;
-      threshold_canvas.height = threshold_img.height;
-      threshold_ctx.drawImage(threshold_img, 0, 0, threshold_img.width, threshold_img.height);
-      tobwimg=threshold_ctx.getImageData(0,0,threshold_canvas.width, threshold_canvas.height);
-      toblackWhite(tobwimg, threshold_ctx);
+      $('#gradeImg').click(function() {
+        gradeImage();
+      });
+      $('#see_threshold').click(function() {
+        $('#see_threshold').hide();
+        $('#hide_threshold').show();
+        $('#threshold_canvas').show();
+      });
+      $('#hide_threshold').click(function() {
+        $('#see_threshold').show();
+        $('#hide_threshold').hide();
+        $('#threshold_canvas').hide();
+      });
+      $('#threshold').change(function() {
+        threshold=$('#threshold').val();
+        $('#thresholdValue').html(threshold);
+        threshold_img = document.getElementsByName('forms')[0];
+        threshold_ctx = threshold_canvas.getContext("2d");
+        threshold_ctx.clearRect(0, 0, threshold_canvas.width, threshold_canvas.height);
+        threshold_canvas.width = threshold_img.width;
+        threshold_canvas.height = threshold_img.height;
+        threshold_ctx.drawImage(threshold_img, 0, 0, threshold_img.width, threshold_img.height);
+        tobwimg=threshold_ctx.getImageData(0,0,threshold_canvas.width, threshold_canvas.height);
+        toblackWhite(tobwimg, threshold_ctx);
+      });
+
+      
+    </script>
+
+  </div>
+</div>
+<!-- /page content -->
+
+<!-- footer content -->
+<!-- /footer content -->
+</div>
+</div>
+
+<!-- Bootstrap -->
+<script src="http://formread.org/app/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="http://formread.org/app/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="http://formread.org/app/vendors/nprogress/nprogress.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="http://formread.org/app/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="http://formread.org/app/vendors/iCheck/icheck.min.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="http://formread.org/app/vendors/moment/min/moment.min.js"></script>
+<script src="http://formread.org/app/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="http://formread.org/app/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="http://formread.org/app/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="http://formread.org/app/vendors/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="http://formread.org/app/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="http://formread.org/app/vendors/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="http://formread.org/app/vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="http://formread.org/app/vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="http://formread.org/app/vendors/autosize/dist/autosize.min.js"></script>
+<!-- starrr -->
+<script src="http://formread.org/app/vendors/starrr/dist/starrr.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="http://formread.org/app/build/js/custom.min.js"></script>
+
+
+<script>
+  set_tables();
+</script>
+
+<!-- bootstrap-daterangepicker -->
+<script>
+  $(document).ready(function() {
+    $('#birthday').daterangepicker({
+      singleDatePicker: true,
+      calender_style: "picker_4"
+    }, function(start, end, label) {
+      console.log(start.toISOString(), end.toISOString(), label);
+    });
+  });
+</script>
+<!-- /bootstrap-daterangepicker -->
+
+<!-- bootstrap-wysiwyg -->
+<script>
+  $(document).ready(function() {
+    function initToolbarBootstrapBindings() {
+      var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
+      'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+      'Times New Roman', 'Verdana'
+      ],
+      fontTarget = $('[title=Font]').siblings('.dropdown-menu');
+      $.each(fonts, function(idx, fontName) {
+        fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
+      });
+      $('a[title]').tooltip({
+        container: 'body'
+      });
+      $('.dropdown-menu input').click(function() {
+        return false;
+      })
+      .change(function() {
+        $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
+      })
+      .keydown('esc', function() {
+        this.value = '';
+        $(this).change();
+      });
+
+      $('[data-role=magic-overlay]').each(function() {
+        var overlay = $(this),
+        target = $(overlay.data('target'));
+        overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+      });
+
+      if ("onwebkitspeechchange" in document.createElement("input")) {
+        var editorOffset = $('#editor').offset();
+
+        $('.voiceBtn').css('position', 'absolute').offset({
+          top: editorOffset.top,
+          left: editorOffset.left + $('#editor').innerWidth() - 35
+        });
+      } else {
+        $('.voiceBtn').hide();
+      }
+    }
+
+    function showErrorAlert(reason, detail) {
+      var msg = '';
+      if (reason === 'unsupported-file-type') {
+        msg = "Unsupported format " + detail;
+      } else {
+        console.log("error uploading file", reason, detail);
+      }
+      $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
+        '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
+    }
+
+    initToolbarBootstrapBindings();
+
+    $('#editor').wysiwyg({
+      fileUploadError: showErrorAlert
     });
 
-    
+    window.prettyPrint;
+    prettyPrint();
+  });
 </script>
+<!-- /bootstrap-wysiwyg -->
 
-          </div>
-        </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        <!-- /footer content -->
-      </div>
-    </div>
-
-    <!-- Bootstrap -->
-    <script src="http://formread.org/app/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="http://formread.org/app/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="http://formread.org/app/vendors/nprogress/nprogress.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="http://formread.org/app/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="http://formread.org/app/vendors/iCheck/icheck.min.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="http://formread.org/app/vendors/moment/min/moment.min.js"></script>
-    <script src="http://formread.org/app/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <!-- bootstrap-wysiwyg -->
-    <script src="http://formread.org/app/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-    <script src="http://formread.org/app/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="http://formread.org/app/vendors/google-code-prettify/src/prettify.js"></script>
-    <!-- jQuery Tags Input -->
-    <script src="http://formread.org/app/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-    <!-- Switchery -->
-    <script src="http://formread.org/app/vendors/switchery/dist/switchery.min.js"></script>
-    <!-- Select2 -->
-    <script src="http://formread.org/app/vendors/select2/dist/js/select2.full.min.js"></script>
-    <!-- Parsley -->
-    <script src="http://formread.org/app/vendors/parsleyjs/dist/parsley.min.js"></script>
-    <!-- Autosize -->
-    <script src="http://formread.org/app/vendors/autosize/dist/autosize.min.js"></script>
-    <!-- starrr -->
-    <script src="http://formread.org/app/vendors/starrr/dist/starrr.js"></script>
-
-    <!-- Custom Theme Scripts -->
-    <script src="http://formread.org/app/build/js/custom.min.js"></script>
-
-
-    <script>
-    set_tables();
+<!-- Select2 -->
+<script>
+  $(document).ready(function() {
+    $(".select2_single").select2({
+      placeholder: "Select a state",
+      allowClear: true
+    });
+    $(".select2_group").select2({});
+    $(".select2_multiple").select2({
+      maximumSelectionLength: 4,
+      placeholder: "With Max Selection limit 4",
+      allowClear: true
+    });
+  });
 </script>
+<!-- /Select2 -->
 
-    <!-- bootstrap-daterangepicker -->
-    <script>
-      $(document).ready(function() {
-        $('#birthday').daterangepicker({
-          singleDatePicker: true,
-          calender_style: "picker_4"
-        }, function(start, end, label) {
-          console.log(start.toISOString(), end.toISOString(), label);
+<!-- jQuery Tags Input -->
+<script>
+  function onAddTag(tag) {
+    alert("Added a tag: " + tag);
+  }
+
+  function onRemoveTag(tag) {
+    alert("Removed a tag: " + tag);
+  }
+
+  function onChangeTag(input, tag) {
+    alert("Changed a tag: " + tag);
+  }
+
+  $(document).ready(function() {
+    $('#tags_1').tagsInput({
+      width: 'auto'
+    });
+  });
+</script>
+<!-- /jQuery Tags Input -->
+
+<!-- Parsley -->
+<script>
+  $(document).ready(function() {
+    $.listen('parsley:field:validate', function() {
+      validateFront();
+    });
+    $('#demo-form .btn').on('click', function() {
+      $('#demo-form').parsley().validate();
+      validateFront();
+    });
+    var validateFront = function() {
+      if (true === $('#demo-form').parsley().isValid()) {
+        $('.bs-callout-info').removeClass('hidden');
+        $('.bs-callout-warning').addClass('hidden');
+      } else {
+        $('.bs-callout-info').addClass('hidden');
+        $('.bs-callout-warning').removeClass('hidden');
+      }
+    };
+  });
+
+  $(document).ready(function() {
+    $.listen('parsley:field:validate', function() {
+      validateFront();
+    });
+    $('#demo-form2 .btn').on('click', function() {
+      $('#demo-form2').parsley().validate();
+      validateFront();
+    });
+    var validateFront = function() {
+      if (true === $('#demo-form2').parsley().isValid()) {
+        $('.bs-callout-info').removeClass('hidden');
+        $('.bs-callout-warning').addClass('hidden');
+      } else {
+        $('.bs-callout-info').addClass('hidden');
+        $('.bs-callout-warning').removeClass('hidden');
+      }
+    };
+  });
+  try {
+    hljs.initHighlightingOnLoad();
+  } catch (err) {}
+</script>
+<!-- /Parsley -->
+
+<!-- Autosize -->
+<script>
+  $(document).ready(function() {
+    autosize($('.resizable_textarea'));
+  });
+</script>
+<!-- /Autosize -->
+
+<!-- Starrr -->
+<script>
+  $(document).ready(function() {
+    $(".stars").starrr();
+
+    $('.stars-existing').starrr({
+      rating: 4
+    });
+
+    $('.stars').on('starrr:change', function (e, value) {
+      $('.stars-count').html(value);
+    });
+
+    $('.stars-existing').on('starrr:change', function (e, value) {
+      $('.stars-count-existing').html(value);
+    });
+  });
+</script>
+<!-- Datatables -->
+<script src="http://formread.org/app/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+<script src="http://formread.org/app/vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script>
+<script src="http://formread.org/app/vendors/jszip/dist/jszip.min.js"></script>
+<script src="http://formread.org/app/vendors/pdfmake/build/pdfmake.min.js"></script>
+<script src="http://formread.org/app/vendors/pdfmake/build/vfs_fonts.js"></script>
+
+<!-- Datatables -->
+<script>
+  $('#settable').click(function() {
+    $(this).hide();
+    $('#gradeImg').hide();
+
+    var head = $('#datatable-buttons4 thead tr th');
+    var body = $('#datatable-buttons4 tbody tr');
+    $("#datatable-buttons2 thead tr th:first-child").after(head);
+    $("#datatable-buttons2 tbody tr").each(function(i) {
+      $('td:first-child', this).after(body.eq(i).children());
+    });
+    $('#img_table').remove();
+    var head = $('#datatable-buttons1 thead tr th');
+    var body = $('#datatable-buttons1 tbody tr');
+    $("#datatable-buttons2 thead tr th:first-child").after(head);
+    $("#datatable-buttons2 tbody tr").each(function(i) {
+      $('td:first-child', this).after(body.eq(i).children());
+    });
+    $('#ocr_table').remove();
+    var head = $('#datatable-buttons3 thead tr th');
+    var body = $('#datatable-buttons3 tbody tr');
+    $("#datatable-buttons2 thead tr th:first-child").after(head);
+    $("#datatable-buttons2 tbody tr").each(function(i) {
+      $('td:first-child', this).after(body.eq(i).children());
+    });
+    $('#qr_table').remove();
+    var handleDataTableButtons = function() {
+      if ($("#datatable-buttons2").length) {
+        $("#datatable-buttons2").DataTable({
+          dom: "Bfrtip",
+          buttons: [
+          {
+            extend: "copy",
+            className: "btn-sm"
+          },
+          {
+            extend: "csv",
+            className: "btn-sm"
+          },
+          {
+            extend: "excel",
+            className: "btn-sm"
+          },
+          {
+            extend: "pdfHtml5",
+            className: "btn-sm"
+          },
+          {
+            extend: "print",
+            className: "btn-sm"
+          },
+          ],
+          responsive: true
         });
-      });
-    </script>
-    <!-- /bootstrap-daterangepicker -->
+      }
+    };
 
-    <!-- bootstrap-wysiwyg -->
-    <script>
-      $(document).ready(function() {
-        function initToolbarBootstrapBindings() {
-          var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
-              'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
-              'Times New Roman', 'Verdana'
-            ],
-            fontTarget = $('[title=Font]').siblings('.dropdown-menu');
-          $.each(fonts, function(idx, fontName) {
-            fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
-          });
-          $('a[title]').tooltip({
-            container: 'body'
-          });
-          $('.dropdown-menu input').click(function() {
-              return false;
-            })
-            .change(function() {
-              $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
-            })
-            .keydown('esc', function() {
-              this.value = '';
-              $(this).change();
-            });
-
-          $('[data-role=magic-overlay]').each(function() {
-            var overlay = $(this),
-              target = $(overlay.data('target'));
-            overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
-          });
-
-          if ("onwebkitspeechchange" in document.createElement("input")) {
-            var editorOffset = $('#editor').offset();
-
-            $('.voiceBtn').css('position', 'absolute').offset({
-              top: editorOffset.top,
-              left: editorOffset.left + $('#editor').innerWidth() - 35
-            });
-          } else {
-            $('.voiceBtn').hide();
-          }
+    TableManageButtons = function() {
+      "use strict";
+      return {
+        init: function() {
+          handleDataTableButtons();
         }
+      };
+    }();
 
-        function showErrorAlert(reason, detail) {
-          var msg = '';
-          if (reason === 'unsupported-file-type') {
-            msg = "Unsupported format " + detail;
-          } else {
-            console.log("error uploading file", reason, detail);
-          }
-          $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
-            '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
-        }
+    $('#datatable').dataTable();
 
-        initToolbarBootstrapBindings();
+    $('#datatable-keytable').DataTable({
+      keys: true
+    });
 
-        $('#editor').wysiwyg({
-          fileUploadError: showErrorAlert
-        });
+    $('#datatable-responsive').DataTable();
 
-        window.prettyPrint;
-        prettyPrint();
+    $('#datatable-scroller').DataTable({
+      ajax: "js/datatables/json/scroller-demo.json",
+      deferRender: true,
+      scrollY: 380,
+      scrollCollapse: true,
+      scroller: true
+    });
+
+    $('#datatable-fixed-header').DataTable({
+      fixedHeader: true
+    });
+
+    var $datatable = $('#datatable-checkbox');
+
+    $datatable.dataTable({
+      'order': [[ 1, 'asc' ]],
+      'columnDefs': [
+      { orderable: false, targets: [0] }
+      ]
+    });
+    $datatable.on('draw.dt', function() {
+      $('input').iCheck({
+        checkboxClass: 'icheckbox_flat-green'
       });
-    </script>
-    <!-- /bootstrap-wysiwyg -->
+    });
 
-    <!-- Select2 -->
-    <script>
-      $(document).ready(function() {
-        $(".select2_single").select2({
-          placeholder: "Select a state",
-          allowClear: true
-        });
-        $(".select2_group").select2({});
-        $(".select2_multiple").select2({
-          maximumSelectionLength: 4,
-          placeholder: "With Max Selection limit 4",
-          allowClear: true
-        });
-      });
-    </script>
-    <!-- /Select2 -->
-
-    <!-- jQuery Tags Input -->
-    <script>
-      function onAddTag(tag) {
-        alert("Added a tag: " + tag);
-      }
-
-      function onRemoveTag(tag) {
-        alert("Removed a tag: " + tag);
-      }
-
-      function onChangeTag(input, tag) {
-        alert("Changed a tag: " + tag);
-      }
-
-      $(document).ready(function() {
-        $('#tags_1').tagsInput({
-          width: 'auto'
-        });
-      });
-    </script>
-    <!-- /jQuery Tags Input -->
-
-    <!-- Parsley -->
-    <script>
-      $(document).ready(function() {
-        $.listen('parsley:field:validate', function() {
-          validateFront();
-        });
-        $('#demo-form .btn').on('click', function() {
-          $('#demo-form').parsley().validate();
-          validateFront();
-        });
-        var validateFront = function() {
-          if (true === $('#demo-form').parsley().isValid()) {
-            $('.bs-callout-info').removeClass('hidden');
-            $('.bs-callout-warning').addClass('hidden');
-          } else {
-            $('.bs-callout-info').addClass('hidden');
-            $('.bs-callout-warning').removeClass('hidden');
-          }
-        };
-      });
-
-      $(document).ready(function() {
-        $.listen('parsley:field:validate', function() {
-          validateFront();
-        });
-        $('#demo-form2 .btn').on('click', function() {
-          $('#demo-form2').parsley().validate();
-          validateFront();
-        });
-        var validateFront = function() {
-          if (true === $('#demo-form2').parsley().isValid()) {
-            $('.bs-callout-info').removeClass('hidden');
-            $('.bs-callout-warning').addClass('hidden');
-          } else {
-            $('.bs-callout-info').addClass('hidden');
-            $('.bs-callout-warning').removeClass('hidden');
-          }
-        };
-      });
-      try {
-        hljs.initHighlightingOnLoad();
-      } catch (err) {}
-    </script>
-    <!-- /Parsley -->
-
-    <!-- Autosize -->
-    <script>
-      $(document).ready(function() {
-        autosize($('.resizable_textarea'));
-      });
-    </script>
-    <!-- /Autosize -->
-
-    <!-- Starrr -->
-    <script>
-      $(document).ready(function() {
-        $(".stars").starrr();
-
-        $('.stars-existing').starrr({
-          rating: 4
-        });
-
-        $('.stars').on('starrr:change', function (e, value) {
-          $('.stars-count').html(value);
-        });
-
-        $('.stars-existing').on('starrr:change', function (e, value) {
-          $('.stars-count-existing').html(value);
-        });
-      });
-    </script>
-        <!-- Datatables -->
-     <script src="http://formread.org/app/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-     <script src="http://formread.org/app/vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script>
-     <script src="http://formread.org/app/vendors/jszip/dist/jszip.min.js"></script>
-     <script src="http://formread.org/app/vendors/pdfmake/build/pdfmake.min.js"></script>
-     <script src="http://formread.org/app/vendors/pdfmake/build/vfs_fonts.js"></script>
-
-        <!-- Datatables -->
-    <script>
-      $('#settable').click(function() {
-        $(this).hide();
-        $('#gradeImg').hide();
-
-        var head = $('#datatable-buttons4 thead tr th');
-        var body = $('#datatable-buttons4 tbody tr');
-        $("#datatable-buttons2 thead tr th:first-child").after(head);
-        $("#datatable-buttons2 tbody tr").each(function(i) {
-          $('td:first-child', this).after(body.eq(i).children());
-        });
-        $('#img_table').remove();
-        var head = $('#datatable-buttons1 thead tr th');
-        var body = $('#datatable-buttons1 tbody tr');
-        $("#datatable-buttons2 thead tr th:first-child").after(head);
-        $("#datatable-buttons2 tbody tr").each(function(i) {
-          $('td:first-child', this).after(body.eq(i).children());
-        });
-        $('#ocr_table').remove();
-        var head = $('#datatable-buttons3 thead tr th');
-        var body = $('#datatable-buttons3 tbody tr');
-        $("#datatable-buttons2 thead tr th:first-child").after(head);
-        $("#datatable-buttons2 tbody tr").each(function(i) {
-          $('td:first-child', this).after(body.eq(i).children());
-        });
-        $('#qr_table').remove();
-        var handleDataTableButtons = function() {
-          if ($("#datatable-buttons2").length) {
-            $("#datatable-buttons2").DataTable({
-              dom: "Bfrtip",
-              buttons: [
-                {
-                  extend: "copy",
-                  className: "btn-sm"
-                },
-                {
-                  extend: "csv",
-                  className: "btn-sm"
-                },
-                {
-                  extend: "excel",
-                  className: "btn-sm"
-                },
-                {
-                  extend: "pdfHtml5",
-                  className: "btn-sm"
-                },
-                {
-                  extend: "print",
-                  className: "btn-sm"
-                },
-              ],
-              responsive: true
-            });
-          }
-        };
-
-        TableManageButtons = function() {
-          "use strict";
-          return {
-            init: function() {
-              handleDataTableButtons();
-            }
-          };
-        }();
-
-        $('#datatable').dataTable();
-
-        $('#datatable-keytable').DataTable({
-          keys: true
-        });
-
-        $('#datatable-responsive').DataTable();
-
-        $('#datatable-scroller').DataTable({
-          ajax: "js/datatables/json/scroller-demo.json",
-          deferRender: true,
-          scrollY: 380,
-          scrollCollapse: true,
-          scroller: true
-        });
-
-        $('#datatable-fixed-header').DataTable({
-          fixedHeader: true
-        });
-
-        var $datatable = $('#datatable-checkbox');
-
-        $datatable.dataTable({
-          'order': [[ 1, 'asc' ]],
-          'columnDefs': [
-            { orderable: false, targets: [0] }
-          ]
-        });
-        $datatable.on('draw.dt', function() {
-          $('input').iCheck({
-            checkboxClass: 'icheckbox_flat-green'
-          });
-        });
-
-        TableManageButtons.init();
-      });
+    TableManageButtons.init();
+  });
       //$(document).ready(function() { $('.dataTable').dataTable(); });
     </script>
     <!-- /Datatables -->
     <!-- /Starrr -->
   </body>
-</html>
+  </html>

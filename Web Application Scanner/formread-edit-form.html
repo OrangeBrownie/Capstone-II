@@ -1,620 +1,620 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <!-- Meta, title, CSS, favicons, etc. -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="csrf-token" content="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
+  <meta name="csrf-token" content="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
 
-    <title>FormRead</title>
-    <link rel="shortcut icon" href="http://formread.org/app/images/fr.ico">
-    <!-- jQuery -->
-    <script src="http://formread.org/app/vendors/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <link href="http://formread.org/app/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="http://formread.org/app/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="http://formread.org/app/vendors/nprogress/nprogress.css" rel="stylesheet">
-    <!-- iCheck -->
-    <link href="http://formread.org/app/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- bootstrap-wysiwyg -->
-    <link href="http://formread.org/app/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
-    <!-- Select2 -->
-    <link href="http://formread.org/app/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
-    <!-- Switchery -->
-    <link href="http://formread.org/app/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
-    <!-- starrr -->
-    <link href="http://formread.org/app/vendors/starrr/dist/starrr.css" rel="stylesheet">
-    <!-- bootstrap-daterangepicker -->
-    <link href="http://formread.org/app/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
-    <!-- bootstrap-progressbar -->
-    <link href="http://formread.org/app/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <!-- JQVMap -->
-    <link href="http://formread.org/app/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
-    <!-- Custom Theme Style -->
-    <link href="http://formread.org/app/build/css/custom.min.css" rel="stylesheet">
+  <title>FormRead</title>
+  <link rel="shortcut icon" href="http://formread.org/app/images/fr.ico">
+  <!-- jQuery -->
+  <script src="http://formread.org/app/vendors/jquery/dist/jquery.min.js"></script>
+  <!-- Bootstrap -->
+  <link href="http://formread.org/app/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="http://formread.org/app/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <!-- NProgress -->
+  <link href="http://formread.org/app/vendors/nprogress/nprogress.css" rel="stylesheet">
+  <!-- iCheck -->
+  <link href="http://formread.org/app/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+  <!-- bootstrap-wysiwyg -->
+  <link href="http://formread.org/app/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+  <!-- Select2 -->
+  <link href="http://formread.org/app/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+  <!-- Switchery -->
+  <link href="http://formread.org/app/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+  <!-- starrr -->
+  <link href="http://formread.org/app/vendors/starrr/dist/starrr.css" rel="stylesheet">
+  <!-- bootstrap-daterangepicker -->
+  <link href="http://formread.org/app/vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+  <!-- bootstrap-progressbar -->
+  <link href="http://formread.org/app/vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+  <!-- JQVMap -->
+  <link href="http://formread.org/app/vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+  <!-- Custom Theme Style -->
+  <link href="http://formread.org/app/build/css/custom.min.css" rel="stylesheet">
 
-    
-<style>
+  
+  <style>
 
     .circle {
-       background-color: rgba(0,0,0,0);
-       border: 5px solid rgba(0,183,229,0.9);
-       opacity: .9;
-       border-right: 5px solid rgba(0,0,0,0);
-       border-left: 5px solid rgba(0,0,0,0);
-       border-radius: 50px;
-       box-shadow: 0 0 35px #2187e7;
-       width: 50px;
-       height: 50px;
-       margin: 0 auto;
-       -moz-animation: spinPulse 1s infinite ease-in-out;
-       -webkit-animation: spinPulse 1s infinite linear;
+     background-color: rgba(0,0,0,0);
+     border: 5px solid rgba(0,183,229,0.9);
+     opacity: .9;
+     border-right: 5px solid rgba(0,0,0,0);
+     border-left: 5px solid rgba(0,0,0,0);
+     border-radius: 50px;
+     box-shadow: 0 0 35px #2187e7;
+     width: 50px;
+     height: 50px;
+     margin: 0 auto;
+     -moz-animation: spinPulse 1s infinite ease-in-out;
+     -webkit-animation: spinPulse 1s infinite linear;
    }
 
    .circle1 {
-       background-color: rgba(0,0,0,0);
-       border: 5px solid rgba(0,183,229,0.9);
-       opacity: .9;
-       border-left: 5px solid rgba(0,0,0,0);
-       border-right: 5px solid rgba(0,0,0,0);
-       border-radius: 50px;
-       box-shadow: 0 0 15px #2187e7;
-       width: 30px;
-       height: 30px;
-       margin: 0 auto;
-       position: relative;
-       top: -40px;
-       -moz-animation: spinoffPulse 1s infinite linear;
-       -webkit-animation: spinoffPulse 1s infinite linear;
+     background-color: rgba(0,0,0,0);
+     border: 5px solid rgba(0,183,229,0.9);
+     opacity: .9;
+     border-left: 5px solid rgba(0,0,0,0);
+     border-right: 5px solid rgba(0,0,0,0);
+     border-radius: 50px;
+     box-shadow: 0 0 15px #2187e7;
+     width: 30px;
+     height: 30px;
+     margin: 0 auto;
+     position: relative;
+     top: -40px;
+     -moz-animation: spinoffPulse 1s infinite linear;
+     -webkit-animation: spinoffPulse 1s infinite linear;
    }
 
    @-moz-keyframes spinPulse {
-       0% {
-           -moz-transform: rotate(160deg);
-           opacity: 0;
-           box-shadow: 0 0 1px #2187e7;
-       }
+     0% {
+       -moz-transform: rotate(160deg);
+       opacity: 0;
+       box-shadow: 0 0 1px #2187e7;
+     }
 
-       50% {
-           -moz-transform: rotate(145deg);
-           opacity: 1;
-       }
+     50% {
+       -moz-transform: rotate(145deg);
+       opacity: 1;
+     }
 
-       100% {
-           -moz-transform: rotate(-320deg);
-           opacity: 0;
-       };
+     100% {
+       -moz-transform: rotate(-320deg);
+       opacity: 0;
+     };
    }
 
    @-moz-keyframes spinoffPulse {
-       0% {
-           -moz-transform: rotate(0deg);
-       }
+     0% {
+       -moz-transform: rotate(0deg);
+     }
 
-       100% {
-           -moz-transform: rotate(360deg);
-       };
+     100% {
+       -moz-transform: rotate(360deg);
+     };
    }
 
    @-webkit-keyframes spinPulse {
-       0% {
-           -webkit-transform: rotate(160deg);
-           opacity: 0;
-           box-shadow: 0 0 1px #2187e7;
-       }
+     0% {
+       -webkit-transform: rotate(160deg);
+       opacity: 0;
+       box-shadow: 0 0 1px #2187e7;
+     }
 
-       50% {
-           -webkit-transform: rotate(145deg);
-           opacity: 1;
-       }
+     50% {
+       -webkit-transform: rotate(145deg);
+       opacity: 1;
+     }
 
-       100% {
-           -webkit-transform: rotate(-320deg);
-           opacity: 0;
-       };
+     100% {
+       -webkit-transform: rotate(-320deg);
+       opacity: 0;
+     };
    }
 
    @-webkit-keyframes spinoffPulse {
-       0% {
-           -webkit-transform: rotate(0deg);
-       }
+     0% {
+       -webkit-transform: rotate(0deg);
+     }
 
-       100% {
-           -webkit-transform: rotate(360deg);
-       };
+     100% {
+       -webkit-transform: rotate(360deg);
+     };
    }
 
+ </style>
+
+ <style>
+  .floatr {
+    float: right;
+  }
 </style>
+<script>
+  window.Laravel = {"csrfToken":"OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP"};
+</script>
+</head>
+<body class="nav-md">
+  <div class="container body">
+    <div class="main_container">
+      <div class="col-md-3 left_col">
+        <div class="left_col scroll-view">
+          <div class="navbar nav_title" style="border: 0;">
+            <a href="http://formread.org/app/dashboard" class="site_title"><i class="fa fa-print"></i> <span>FormRead</span></a>
+          </div>
 
-    <style>
-      .floatr {
-          float: right;
-      }
-    </style>
-    <script>
-        window.Laravel = {"csrfToken":"OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP"};
-    </script>
-  </head>
-  <body class="nav-md">
-    <div class="container body">
-      <div class="main_container">
-        <div class="col-md-3 left_col">
-          <div class="left_col scroll-view">
-            <div class="navbar nav_title" style="border: 0;">
-              <a href="http://formread.org/app/dashboard" class="site_title"><i class="fa fa-print"></i> <span>FormRead</span></a>
+          <div class="clearfix"></div>
+
+          <!-- menu profile quick info -->
+          <div class="profile clearfix">
+            <div class="profile_pic">
+              <img src="http://formread.org/app/images\user.png" class="img-circle profile_img">
             </div>
-
+            <div class="profile_info">
+              <span>Welcome,</span>
+              <h2>Genilo</h2>
+            </div>
             <div class="clearfix"></div>
-
-            <!-- menu profile quick info -->
-            <div class="profile clearfix">
-              <div class="profile_pic">
-                                      <img src="http://formread.org/app/images\user.png" class="img-circle profile_img">
-                                </div>
-              <div class="profile_info">
-                <span>Welcome,</span>
-                <h2>Genilo</h2>
-              </div>
-              <div class="clearfix"></div>
-            </div>
-            <!-- /menu profile quick info -->
-            <br />
-            <!-- sidebar menu -->
-            <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                <ul class="nav side-menu">
-                  <li><a href="http://formread.org/app/profile"><i class="fa fa-user"></i>Profile</a></li>
-                  <li><a><i class="fa fa-edit"></i>Forms<span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="http://formread.org/app/updateform">Edit Form</a></li>
-                      <li><a href="https://youtu.be/X-jZkB_uSP8" target="_blank">Tutorial</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-table"></i> Forms Processing <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="http://formread.org/app/readform">Your Forms</a></li>
-                      <li><a href="https://youtu.be/xpyrcvHKP4c" target="_blank">Tutorial</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-graduation-cap"></i> Classroom <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="http://formread.org/app/myClasses">My Classrooms</a></li>
-                      <li><a href="#" target="_blank">Tutorial</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-download"></i> Downloads <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="http://formread.org/app/templates">Forms Templates</a></li>
-                      <li><a href="http://formread.org/app/software">Useful Things</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="http://formread.org/app/OCR-language"><i class="fa fa-language"></i> Install OCR Language</a></li>
-                  <li><a href="http://formread.org/app/donate"><i class="fa fa-thumbs-o-up"></i> DONATE</a></li>
+          </div>
+          <!-- /menu profile quick info -->
+          <br />
+          <!-- sidebar menu -->
+          <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+            <ul class="nav side-menu">
+              <li><a href="http://formread.org/app/profile"><i class="fa fa-user"></i>Profile</a></li>
+              <li><a><i class="fa fa-edit"></i>Forms<span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="http://formread.org/app/updateform">Edit Form</a></li>
+                  <li><a href="https://youtu.be/X-jZkB_uSP8" target="_blank">Tutorial</a></li>
                 </ul>
-            </div>
-            <!-- /sidebar menu -->
-
-            <!-- /menu footer buttons -->
-            <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Settings">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="FullScreen" class="menu_toggle">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-              </a>
-                <form id="logout-form" action="http://formread.org/app/logout" method="POST" style="display: none;">
-                    <input type="hidden" name="_token" value="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
-                </form>
-            </div>
-            <!-- /menu footer buttons -->
+              </li>
+              <li><a><i class="fa fa-table"></i> Forms Processing <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="http://formread.org/app/readform">Your Forms</a></li>
+                  <li><a href="https://youtu.be/xpyrcvHKP4c" target="_blank">Tutorial</a></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-graduation-cap"></i> Classroom <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="http://formread.org/app/myClasses">My Classrooms</a></li>
+                  <li><a href="#" target="_blank">Tutorial</a></li>
+                </ul>
+              </li>
+              <li><a><i class="fa fa-download"></i> Downloads <span class="fa fa-chevron-down"></span></a>
+                <ul class="nav child_menu">
+                  <li><a href="http://formread.org/app/templates">Forms Templates</a></li>
+                  <li><a href="http://formread.org/app/software">Useful Things</a></li>
+                </ul>
+              </li>
+              <li><a href="http://formread.org/app/OCR-language"><i class="fa fa-language"></i> Install OCR Language</a></li>
+              <li><a href="http://formread.org/app/donate"><i class="fa fa-thumbs-o-up"></i> DONATE</a></li>
+            </ul>
           </div>
-        </div>
+          <!-- /sidebar menu -->
 
-        <!-- top navigation -->
-        <div class="top_nav">
-          <div class="nav_menu">
-            <nav>
-              <div class="nav toggle">
-                  <a id="menu_toggle" class="menu_toggle"><i class="fa fa-bars"></i></a>
-              </div>
-              <ul class="nav navbar-nav navbar-right floatr">
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                          <img src="http://formread.org/app/images\user.png" alt="">
-                                        Genilo
-                    <span class=" fa fa-angle-down"></span>
+          <!-- /menu footer buttons -->
+          <div class="sidebar-footer hidden-small">
+            <a data-toggle="tooltip" data-placement="top" title="Settings">
+              <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="FullScreen" class="menu_toggle">
+              <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Lock">
+              <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+            </a>
+            <a data-toggle="tooltip" data-placement="top" title="Logout" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+              <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
+            </a>
+            <form id="logout-form" action="http://formread.org/app/logout" method="POST" style="display: none;">
+              <input type="hidden" name="_token" value="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
+            </form>
+          </div>
+          <!-- /menu footer buttons -->
+        </div>
+      </div>
+
+      <!-- top navigation -->
+      <div class="top_nav">
+        <div class="nav_menu">
+          <nav>
+            <div class="nav toggle">
+              <a id="menu_toggle" class="menu_toggle"><i class="fa fa-bars"></i></a>
+            </div>
+            <ul class="nav navbar-nav navbar-right floatr">
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  <img src="http://formread.org/app/images\user.png" alt="">
+                  Genilo
+                  <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                  <li><a href="http://formread.org/app/profile"> Profile</a></li>
+                  <li><a href="http://formread.org/app/forum">Help</a></li>
+                  <li>
+                    <a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" ><i class="fa fa-sign-out pull-right"></i> Log Out</a>
+                    <form id="logout-form" action="http://formread.org/app/logout" method="POST" style="display: none;">
+                      <input type="hidden" name="_token" value="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
+                    </form>
+                  </li>
+                </ul>
+              </li>
+              <li class="">
+                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                  en                    <span class=" fa fa-angle-down"></span>
+                </a>
+                <ul class="dropdown-menu ">
+                  <li><a href="http://formread.org/app/lang/en">English</a></li>
+                  <li><a href="http://formread.org/app/lang/es">Español</a></li>
+                  <li><a href="http://formread.org/app/lang/pt">Português</a></li>
+                  <li><a href="http://formread.org/app/lang/fr">Français</a></li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <!-- /top navigation -->
+
+      <!-- page content -->
+      <div class="right_col" role="main">
+        <div class="">
+          
+          <div class="row">
+            <div class="x_content" id="file_upload">
+              Image File<input id="file_input" type='file' accept=".png, .jpeg, .jpg"/>
+              PDF File<input id='pdf' type='file' accept=".pdf"/>
+            </div>
+            <div class="col-lg-12" style="position: fixed" alaign="center">
+              <div class="x_content" hidden id="commands">
+                <div class="btn-group">
+                  <a id="omr-sq" class="btn btn-app">
+                    <i class="fa fa-check-square-o"></i> OMR Square
                   </a>
-                  <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="http://formread.org/app/profile"> Profile</a></li>
-                    <li><a href="http://formread.org/app/forum">Help</a></li>
-                    <li>
-                        <a onclick="event.preventDefault(); document.getElementById('logout-form').submit();" ><i class="fa fa-sign-out pull-right"></i> Log Out</a>
-                        <form id="logout-form" action="http://formread.org/app/logout" method="POST" style="display: none;">
-                            <input type="hidden" name="_token" value="OvIjBCL1ahQN76aWTAf5JFdBZrzlRTq6K21ZpNRP">
-                        </form>
-                    </li>
-                  </ul>
-                </li>
-                <li class="">
-                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    en                    <span class=" fa fa-angle-down"></span>
+                  <a id="omr-sc" class="btn btn-app">
+                    <i class="fa fa-check-circle-o"></i> OMR Circle
                   </a>
-                  <ul class="dropdown-menu ">
-                    <li><a href="http://formread.org/app/lang/en">English</a></li>
-                    <li><a href="http://formread.org/app/lang/es">Español</a></li>
-                    <li><a href="http://formread.org/app/lang/pt">Português</a></li>
-                    <li><a href="http://formread.org/app/lang/fr">Français</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </nav>
-          </div>
-        </div>
-        <!-- /top navigation -->
-
-        <!-- page content -->
-        <div class="right_col" role="main">
-          <div class="">
-                        
-    <div class="row">
-                    <div class="x_content" id="file_upload">
-        Image File<input id="file_input" type='file' accept=".png, .jpeg, .jpg"/>
-        PDF File<input id='pdf' type='file' accept=".pdf"/>
-    </div>
-        <div class="col-lg-12" style="position: fixed" alaign="center">
-        <div class="x_content" hidden id="commands">
-          <div class="btn-group">
-              <a id="omr-sq" class="btn btn-app">
-              <i class="fa fa-check-square-o"></i> OMR Square
-            </a>
-            <a id="omr-sc" class="btn btn-app">
-              <i class="fa fa-check-circle-o"></i> OMR Circle
-            </a>
-            <a id="ocr" class="btn btn-app">
-              <i class="fa fa-font"></i> OCR
-            </a>
-            <a id="bcr" class="btn btn-app">
-                <span class="glyphicon glyphicon-qrcode"></span> QR CODE
-            </a>
-            <a id="img"  class="btn btn-app">
-              <i class="fa fa-file-image-o"></i> IMG
-            </a>
-            <a id="delete"  class="btn btn-app">
-              <i class="fa fa-trash"></i> DEL FIELD
-            </a>
-            <a id="save"  class="btn btn-app">
-              <i class="fa fa-save"></i> SAVE FORM
-            </a>
-            <a id="threshold"  class="btn btn-app">
-              <i class="fa fa-sliders"></i> Threshold
-            </a>
-          </div>
-        </div>
-        <div class="x_content row" hidden id="cancel">
-          <div class="col-lg-1">
-            <div class="btn-group">
-              <a id="cancel"  class="btn btn-app cancel">
-                <i class="fa fa-close"></i> EXIT
-              </a>
-              <a id="readcorners"  class="btn btn-app" hidden>
-                <i class="fa fa-retweet"></i> Read Corners
-              </a>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-2 form-group has-feedback" align="center" id="markwidth" hidden>
-            <input type="number" min="0" class="form-control has-feedback-right" id="width">
-            <span class="fa fa-arrows-h form-control-feedback right" aria-hidden="true"></span>
-            <label for="ex3">Mark Width</label>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-2 form-group has-feedback" align="center" id="markheight" hidden>
-            <input type="number" min="0" class="form-control has-feedback-right" id="height">
-            <span class="fa fa-arrows-v form-control-feedback right" aria-hidden="true"></span>
-            <label for="ex3">Mark Height</label>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-2 form-group has-feedback" align="center" id="markradius" hidden>
-            <input type="number" min="0" class="form-control has-feedback-right" id="radius">
-            <span class="fa fa-arrow-circle-o-up form-control-feedback right" aria-hidden="true"></span>
-            <label for="ex3">Mark Radius</label>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-2 form-group has-feedback" align="center" id="thresholdbar" hidden>
-            <input type="range" min="1" max="255" step="1" value="128" id="thresholdinput">
-            <label for="ex3" id="inputThresholdValue"></label>
-          </div>
-        </div>
-        </div>
-        <div class="modal fade bs-example-modal-bg" tabindex="-1" role="dialog" aria-hidden="true"  id="myModal2">
-          <div class="modal-dialog modal-bg">
-            <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                  </button>
-                  <h4 class="modal-title" id="myModalLabel2">Settings</h4>
+                  <a id="ocr" class="btn btn-app">
+                    <i class="fa fa-font"></i> OCR
+                  </a>
+                  <a id="bcr" class="btn btn-app">
+                    <span class="glyphicon glyphicon-qrcode"></span> QR CODE
+                  </a>
+                  <a id="img"  class="btn btn-app">
+                    <i class="fa fa-file-image-o"></i> IMG
+                  </a>
+                  <a id="delete"  class="btn btn-app">
+                    <i class="fa fa-trash"></i> DEL FIELD
+                  </a>
+                  <a id="save"  class="btn btn-app">
+                    <i class="fa fa-save"></i> SAVE FORM
+                  </a>
+                  <a id="threshold"  class="btn btn-app">
+                    <i class="fa fa-sliders"></i> Threshold
+                  </a>
                 </div>
-                <form id="modalok" action="javascript:void(0);">
+              </div>
+              <div class="x_content row" hidden id="cancel">
+                <div class="col-lg-1">
+                  <div class="btn-group">
+                    <a id="cancel"  class="btn btn-app cancel">
+                      <i class="fa fa-close"></i> EXIT
+                    </a>
+                    <a id="readcorners"  class="btn btn-app" hidden>
+                      <i class="fa fa-retweet"></i> Read Corners
+                    </a>
+                  </div>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 form-group has-feedback" align="center" id="markwidth" hidden>
+                  <input type="number" min="0" class="form-control has-feedback-right" id="width">
+                  <span class="fa fa-arrows-h form-control-feedback right" aria-hidden="true"></span>
+                  <label for="ex3">Mark Width</label>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 form-group has-feedback" align="center" id="markheight" hidden>
+                  <input type="number" min="0" class="form-control has-feedback-right" id="height">
+                  <span class="fa fa-arrows-v form-control-feedback right" aria-hidden="true"></span>
+                  <label for="ex3">Mark Height</label>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 form-group has-feedback" align="center" id="markradius" hidden>
+                  <input type="number" min="0" class="form-control has-feedback-right" id="radius">
+                  <span class="fa fa-arrow-circle-o-up form-control-feedback right" aria-hidden="true"></span>
+                  <label for="ex3">Mark Radius</label>
+                </div>
+                <div class="col-md-2 col-sm-2 col-xs-2 form-group has-feedback" align="center" id="thresholdbar" hidden>
+                  <input type="range" min="1" max="255" step="1" value="128" id="thresholdinput">
+                  <label for="ex3" id="inputThresholdValue"></label>
+                </div>
+              </div>
+            </div>
+            <div class="modal fade bs-example-modal-bg" tabindex="-1" role="dialog" aria-hidden="true"  id="myModal2">
+              <div class="modal-dialog modal-bg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel2">Settings</h4>
+                  </div>
+                  <form id="modalok" action="javascript:void(0);">
                     <div class="modal-body">
                       <div class="row">
                         <input type="hidden" id="shape" >
                         <div class="form-group col-lg-6">
-                            <p>Field Name</p>
-                            <input type="text" id="field_name" class="form-control" name="field_name" required>
+                          <p>Field Name</p>
+                          <input type="text" id="field_name" class="form-control" name="field_name" required>
                         </div>
                         <div class="form-group col-lg-6" id="id_field_div">
-                            <p>Is this an ID field?</p>
-                            <select id="idField" class="form-control" name="idField">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
+                          <p>Is this an ID field?</p>
+                          <select id="idField" class="form-control" name="idField">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
                         </div>
                         <div class="form-group col-lg-6">
-                            <p>Field Orientation</p>
-                            <select id="field_orientation" class="form-control" name="field_orientation">
-                                <option value="1">Horizontal</option>
-                                <option value="2">Vertical</option>
-                            </select>
+                          <p>Field Orientation</p>
+                          <select id="field_orientation" class="form-control" name="field_orientation">
+                            <option value="1">Horizontal</option>
+                            <option value="2">Vertical</option>
+                          </select>
                         </div>
                         <div class="form-group col-lg-6">
-                            <p>Output</p>
-                            <select id="output" class="form-control" name="output">
-                                <option value="1">A - Z</option>
-                                <option value="2">0, 1, 2 ...</option>
-                                <option value="3">1, 2, 3 ...</option>
-                            </select>
+                          <p>Output</p>
+                          <select id="output" class="form-control" name="output">
+                            <option value="1">A - Z</option>
+                            <option value="2">0, 1, 2 ...</option>
+                            <option value="3">1, 2, 3 ...</option>
+                          </select>
                         </div>
                         <div class="form-group col-lg-6">
-                            <p>Number of Rows</p>
-                            <input type="number" id="rows" class="form-control" name="rows">
+                          <p>Number of Rows</p>
+                          <input type="number" id="rows" class="form-control" name="rows">
                         </div>
                         <div class="form-group col-lg-6">
-                            <p>Number of Columns</p>
-                            <input type="number" id="columns" class="form-control" name="columns">
+                          <p>Number of Columns</p>
+                          <input type="number" id="columns" class="form-control" name="columns">
                         </div>
                         <div class="form-group col-lg-6">
-                            <p>Allow Multi-Marks</p>
-                            <select id="multiMark" class="form-control" name="multiMark">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
+                          <p>Allow Multi-Marks</p>
+                          <select id="multiMark" class="form-control" name="multiMark">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
                         </div>
                         <div class="form-group col-lg-6">
-                            <p>Concatenate</p>
-                            <select id="concatenate" class="form-control" name="concatenate">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
+                          <p>Concatenate</p>
+                          <select id="concatenate" class="form-control" name="concatenate">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
                         </div>
                       </div>
                     </div>
-                <div class="modal-footer">
-                  <button id="cancelModal" type="button" class="btn btn-default cancel">Cancel</button>
-                  <button type="submit" class="btn btn-primary">Create Field</button>
+                    <div class="modal-footer">
+                      <button id="cancelModal" type="button" class="btn btn-default cancel">Cancel</button>
+                      <button type="submit" class="btn btn-primary">Create Field</button>
+                    </div>
+                  </form>
                 </div>
-                </form>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="modal fade bs-example-modal-bg" tabindex="-1" role="dialog" aria-hidden="true"  id="myModal3">
-          <div class="modal-dialog modal-bg">
-            <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
-                  </button>
-                  <h4 class="modal-title" id="myModalLabel3">Settings</h4>
-                </div>
-                <form id="modalok" action="javascript:updateField();" >
+            <div class="modal fade bs-example-modal-bg" tabindex="-1" role="dialog" aria-hidden="true"  id="myModal3">
+              <div class="modal-dialog modal-bg">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel3">Settings</h4>
+                  </div>
+                  <form id="modalok" action="javascript:updateField();" >
                     <div class="modal-body">
                       <div class="row">
                         <input type="hidden" id="shape" >
                         <div class="form-group col-lg-6">
-                            <p>Field Name</p>
-                            <input type="text" id="field_name_up" class="form-control" required>
+                          <p>Field Name</p>
+                          <input type="text" id="field_name_up" class="form-control" required>
                         </div>
                         <div class="form-group col-lg-6" id="id_field_div_up">
-                            <p>Is this an ID field?</p>
-                            <select id="idField_up" class="form-control">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
+                          <p>Is this an ID field?</p>
+                          <select id="idField_up" class="form-control">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
                         </div>
                         <div class="form-group col-lg-6">
-                            <p>Allow Multi-Marks</p>
-                            <select id="multiMark_up" class="form-control">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
+                          <p>Allow Multi-Marks</p>
+                          <select id="multiMark_up" class="form-control">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
                         </div>
                         <div class="form-group col-lg-6">
-                            <p>Output</p>
-                            <select id="output_up" class="form-control">
-                                <option value="1">A - Z</option>
-                                <option value="2">0, 1, 2 ...</option>
-                                <option value="3">1, 2, 3 ...</option>
-                            </select>
+                          <p>Output</p>
+                          <select id="output_up" class="form-control">
+                            <option value="1">A - Z</option>
+                            <option value="2">0, 1, 2 ...</option>
+                            <option value="3">1, 2, 3 ...</option>
+                          </select>
                         </div>
                         <div class="form-group col-lg-6">
-                            <p>Concatenate</p>
-                            <select id="concatenate_up" class="form-control">
-                                <option value="0">No</option>
-                                <option value="1">Yes</option>
-                            </select>
+                          <p>Concatenate</p>
+                          <select id="concatenate_up" class="form-control">
+                            <option value="0">No</option>
+                            <option value="1">Yes</option>
+                          </select>
                         </div>
                       </div>
                     </div>
                     <input type="hidden" id="old_name"/>
                     <input type="hidden" id="old_output"/>
-                <div class="modal-footer">
-                  <button id="cancelModal" type="button" class="btn btn-default cancel" data-dismiss="modal" aria-label="Close">Cancel</button>
-                  <button type="submit" class="btn btn-primary">Update Field</button>
+                    <div class="modal-footer">
+                      <button id="cancelModal" type="button" class="btn btn-default cancel" data-dismiss="modal" aria-label="Close">Cancel</button>
+                      <button type="submit" class="btn btn-primary">Update Field</button>
+                    </div>
+                  </form>
                 </div>
-                </form>
+              </div>
+            </div>
+            <canvas id="canvas"></canvas>
+            <div class="modal" id="loading">
+              <br><br><br><br><br><br><br><br><br>
+              <div class="circle"></div>
+              <div class="circle1"></div>
             </div>
           </div>
-        </div>
-        <canvas id="canvas"></canvas>
-        <div class="modal" id="loading">
-                <br><br><br><br><br><br><br><br><br>
-                <div class="circle"></div>
-                <div class="circle1"></div>
-        </div>
-    </div>
-    <script type="text/javascript" src="http://formread.org/app/js/dtables.js?t=69903"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing-api.min.js"></script>
-    <script type="text/javascript" src="http://formread.org/app/js/pdfjs/build/pdf.js"></script>
+          <script type="text/javascript" src="http://formread.org/app/js/dtables.js?t=69903"></script>
+          <script src="http://cdnjs.cloudflare.com/ajax/libs/processing.js/1.4.1/processing-api.min.js"></script>
+          <script type="text/javascript" src="http://formread.org/app/js/pdfjs/build/pdf.js"></script>
 
-    <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-        $body = $("body");
-        $(document).on({
-            ajaxStart: function() { $body.addClass("loading");    },
-             ajaxStop: function() { $body.removeClass("loading"); }
-        });
-        $(function () {
-            $('.modal').modal({
+          <script>
+            document.addEventListener('contextmenu', event => event.preventDefault());
+            $body = $("body");
+            $(document).on({
+              ajaxStart: function() { $body.addClass("loading");    },
+              ajaxStop: function() { $body.removeClass("loading"); }
+            });
+            $(function () {
+              $('.modal').modal({
                 show: false,
                 keyboard: false,
                 backdrop: 'static'
+              });
             });
-        });
         //-----------aligning sheet variables-----------
-                    $('#save').click(function(){
-                saveform("http://formread.org/app/createform/2/delete", "http://formread.org/app/createform/2/update", 2);
-            });
-                $('.cancel').click(function(){
-            $('#myModal2').modal('hide');
-            $("#rows").val("");
-            $("#columns").val("");
-            $("#field_name").val("");
-            $("#field_orientation").val("");
-            $("#multiMark").val("");
-            $('#field_orientation').prop('disabled', false);
-            $('#rows').prop('disabled', false);
-            $('#columns').prop('disabled', false);
-            $('#multiMark').prop('disabled', false);
-            $('#output').prop('disabled', false);
-            $('#concatenate').prop('disabled', false);
-            $("#id_field_div").hide();
-            $('#commands').show();
-            boxes[2].x=10000;
-            boxes[3].y=10000;
-            invalidate();
-            $('#cancel').hide();
-            $("#markwidth").hide();
-            $("#markheight").hide();
-            $("#markradius").hide();
-            $("#readcorners").hide();
-            $("#thresholdbar").hide();
+        $('#save').click(function(){
+          saveform("http://formread.org/app/createform/2/delete", "http://formread.org/app/createform/2/update", 2);
+        });
+        $('.cancel').click(function(){
+          $('#myModal2').modal('hide');
+          $("#rows").val("");
+          $("#columns").val("");
+          $("#field_name").val("");
+          $("#field_orientation").val("");
+          $("#multiMark").val("");
+          $('#field_orientation').prop('disabled', false);
+          $('#rows').prop('disabled', false);
+          $('#columns').prop('disabled', false);
+          $('#multiMark').prop('disabled', false);
+          $('#output').prop('disabled', false);
+          $('#concatenate').prop('disabled', false);
+          $("#id_field_div").hide();
+          $('#commands').show();
+          boxes[2].x=10000;
+          boxes[3].y=10000;
+          invalidate();
+          $('#cancel').hide();
+          $("#markwidth").hide();
+          $("#markheight").hide();
+          $("#markradius").hide();
+          $("#readcorners").hide();
+          $("#thresholdbar").hide();
         });
         $('#modalok').submit(function(){;
-            $('#myModal2').modal('hide');
+          $('#myModal2').modal('hide');
         });
         $('#omr-sq').click(function(){
-            $("#id_field_div").show();
-            $('#shape').val('1');
-            $('#myModal2').modal('show');
-            $('#commands').hide();
-            $('#cancel').show();
-            $("#markwidth").show();
-            $("#markheight").show();
+          $("#id_field_div").show();
+          $('#shape').val('1');
+          $('#myModal2').modal('show');
+          $('#commands').hide();
+          $('#cancel').show();
+          $("#markwidth").show();
+          $("#markheight").show();
 
         });
         $('#omr-sc').click(function(){
-            $("#id_field_div").show();
-            $('#shape').val('2');
-            $('#myModal2').modal('show');
-            $('#commands').hide();
-            $('#cancel').show();
-            $("#markradius").show();
+          $("#id_field_div").show();
+          $('#shape').val('2');
+          $('#myModal2').modal('show');
+          $('#commands').hide();
+          $('#cancel').show();
+          $("#markradius").show();
         });
         $('#ocr').click(function(){
-            $('#shape').val('4');
-            $('#myModal2').modal('show');
-            $('#field_orientation').prop('disabled', true);
-            $('#rows').prop('disabled', true);
-            $('#columns').prop('disabled', true);
-            $('#multiMark').prop('disabled', true);
-            $('#output').prop('disabled', true);
-            $('#concatenate').prop('disabled', true);
-            $('#commands').hide();
-            $('#cancel').show();
-            $("#id_field_div").show();
+          $('#shape').val('4');
+          $('#myModal2').modal('show');
+          $('#field_orientation').prop('disabled', true);
+          $('#rows').prop('disabled', true);
+          $('#columns').prop('disabled', true);
+          $('#multiMark').prop('disabled', true);
+          $('#output').prop('disabled', true);
+          $('#concatenate').prop('disabled', true);
+          $('#commands').hide();
+          $('#cancel').show();
+          $("#id_field_div").show();
         });
         $('#bcr').click(function(){
-            $("#id_field_div").show();
-            $('#shape').val('5');
-            $('#myModal2').modal('show');
-            $('#commands').hide();
-            $('#field_orientation').prop('disabled', true);
-            $('#rows').prop('disabled', true);
-            $('#columns').prop('disabled', true);
-            $('#multiMark').prop('disabled', true);
-            $('#output').prop('disabled', true);
-            $('#concatenate').prop('disabled', true);
-            $('#commands').hide();
-            $('#cancel').show();
+          $("#id_field_div").show();
+          $('#shape').val('5');
+          $('#myModal2').modal('show');
+          $('#commands').hide();
+          $('#field_orientation').prop('disabled', true);
+          $('#rows').prop('disabled', true);
+          $('#columns').prop('disabled', true);
+          $('#multiMark').prop('disabled', true);
+          $('#output').prop('disabled', true);
+          $('#concatenate').prop('disabled', true);
+          $('#commands').hide();
+          $('#cancel').show();
         });
         $('#img').click(function(){
-            $('#shape').val('3');
-            $('#myModal2').modal('show');
-            $('#commands').hide();
-            $('#field_orientation').prop('disabled', true);
-            $('#rows').prop('disabled', true);
-            $('#columns').prop('disabled', true);
-            $('#multiMark').prop('disabled', true);
-            $('#output').prop('disabled', true);
-            $('#concatenate').prop('disabled', true);
-            $('#commands').hide();
-            $("#id_field_div").hide();
-            $('#cancel').show();
+          $('#shape').val('3');
+          $('#myModal2').modal('show');
+          $('#commands').hide();
+          $('#field_orientation').prop('disabled', true);
+          $('#rows').prop('disabled', true);
+          $('#columns').prop('disabled', true);
+          $('#multiMark').prop('disabled', true);
+          $('#output').prop('disabled', true);
+          $('#concatenate').prop('disabled', true);
+          $('#commands').hide();
+          $("#id_field_div").hide();
+          $('#cancel').show();
         });
         $('#delete').click(function(){
-            $('#shape').val('6');
-            $('#commands').hide();
-            $('#cancel').show();
+          $('#shape').val('6');
+          $('#commands').hide();
+          $('#cancel').show();
         });
         $('#width').change(function(){
-            width = $('#width').val();
-            boxes[2].w = width;
-            boxes[3].w = width;
-            invalidate();
+          width = $('#width').val();
+          boxes[2].w = width;
+          boxes[3].w = width;
+          invalidate();
         });
         $('#height').change(function(){
-            height = $('#height').val();
-            boxes[2].h = height;
-            boxes[3].h = height;
-            invalidate();
+          height = $('#height').val();
+          boxes[2].h = height;
+          boxes[3].h = height;
+          invalidate();
         });
         $('#radius').change(function(){
-            radius = $('#radius').val();
-            boxes[0].r = radius;
-            boxes[1].r = radius;
-            invalidate();
+          radius = $('#radius').val();
+          boxes[0].r = radius;
+          boxes[1].r = radius;
+          invalidate();
         });
         $('#threshold').click(function(){
-            $('#commands').hide();
-            $('#cancel').show();
-            $("#readcorners").show();
-            $("#thresholdbar").show();
+          $('#commands').hide();
+          $('#cancel').show();
+          $("#readcorners").show();
+          $("#thresholdbar").show();
         });
         $('#thresholdinput').change(function(){
-            tempCanvas = document.createElement("canvas")
-            tempCanvas.width = img.width;
-            tempCanvas.height = img.height;
-            tempCtx = tempCanvas.getContext("2d");
-            tempCtx.clearRect(0, 0, tempCanvas.width, tempCanvas.height);
-            tempCtx.drawImage(img, 0, 0, img.width, img.height);
-            tobwimg=tempCtx.getImageData(0,0,tempCanvas.width, tempCanvas.height);
-            threshold=$('#thresholdinput').val();
-            $('#inputThresholdValue').html(threshold);
-            toblackWhite(tobwimg, ctx);
+          tempCanvas = document.createElement("canvas")
+          tempCanvas.width = img.width;
+          tempCanvas.height = img.height;
+          tempCtx = tempCanvas.getContext("2d");
+          tempCtx.clearRect(0, 0, tempCanvas.width, tempCanvas.height);
+          tempCtx.drawImage(img, 0, 0, img.width, img.height);
+          tobwimg=tempCtx.getImageData(0,0,tempCanvas.width, tempCanvas.height);
+          threshold=$('#thresholdinput').val();
+          $('#inputThresholdValue').html(threshold);
+          toblackWhite(tobwimg, ctx);
         });
         $('#readcorners').click(function(){
           set_sheet_corners();
@@ -659,21 +659,21 @@
         var height;
         var radius;
         var area_boxes_count = 0;
-    </script>
+      </script>
 
-        <script>
+      <script>
         $(window).load(function(){
-            $('#myModal').modal('show');
+          $('#myModal').modal('show');
         });
         var temp_boxes = [];
 
         function init() {
-            HEIGHT = canvas.height;
-            WIDTH = canvas.width;
-            ghostcanvas = document.createElement('canvas');
-            ghostcanvas.height = HEIGHT;
-            ghostcanvas.width = WIDTH;
-            gctx = ghostcanvas.getContext('2d');
+          HEIGHT = canvas.height;
+          WIDTH = canvas.width;
+          ghostcanvas = document.createElement('canvas');
+          ghostcanvas.height = HEIGHT;
+          ghostcanvas.width = WIDTH;
+          gctx = ghostcanvas.getContext('2d');
 
             //fixes a problem where double clicking causes text to get selected on the canvas
             canvas.onselectstart = function () { return false; }
@@ -698,254 +698,254 @@
 
             
             for (var tb = 0; tb < temp_boxes.length; tb++){
-                if (temp_boxes[tb].shape=="2"){
-                    addCircle((temp_boxes[tb].x*dx)+esq[temp_boxes[tb].corner][0], (temp_boxes[tb].y*dy)+esq[temp_boxes[tb].corner][1], temp_boxes[tb].r*dx, temp_boxes[tb].fill,temp_boxes[tb].field_name,temp_boxes[tb].q_id,temp_boxes[tb].q_option,temp_boxes[tb].shape,temp_boxes[tb].multiMark,temp_boxes[tb].idField,temp_boxes[tb].concatenate);
-                }else{
-                    addRect((temp_boxes[tb].x*dx)+esq[temp_boxes[tb].corner][0], (temp_boxes[tb].y*dy)+esq[temp_boxes[tb].corner][1], temp_boxes[tb].w*dx,temp_boxes[tb].h*dy,temp_boxes[tb].fill,temp_boxes[tb].field_name,temp_boxes[tb].q_id,temp_boxes[tb].q_option,temp_boxes[tb].shape,temp_boxes[tb].multiMark,temp_boxes[tb].idField,temp_boxes[tb].concatenate);
-                }
+              if (temp_boxes[tb].shape=="2"){
+                addCircle((temp_boxes[tb].x*dx)+esq[temp_boxes[tb].corner][0], (temp_boxes[tb].y*dy)+esq[temp_boxes[tb].corner][1], temp_boxes[tb].r*dx, temp_boxes[tb].fill,temp_boxes[tb].field_name,temp_boxes[tb].q_id,temp_boxes[tb].q_option,temp_boxes[tb].shape,temp_boxes[tb].multiMark,temp_boxes[tb].idField,temp_boxes[tb].concatenate);
+              }else{
+                addRect((temp_boxes[tb].x*dx)+esq[temp_boxes[tb].corner][0], (temp_boxes[tb].y*dy)+esq[temp_boxes[tb].corner][1], temp_boxes[tb].w*dx,temp_boxes[tb].h*dy,temp_boxes[tb].fill,temp_boxes[tb].field_name,temp_boxes[tb].q_id,temp_boxes[tb].q_option,temp_boxes[tb].shape,temp_boxes[tb].multiMark,temp_boxes[tb].idField,temp_boxes[tb].concatenate);
+              }
             }
             // set our events. Up and down are for dragging,
             // double click is for making new boxes
             canvas.onmousedown = myDown;
             canvas.onmouseup = myUp;
             canvas.ondblclick = myDblClick;
-        }
-    </script>
+          }
+        </script>
 
-          </div>
-        </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-        <!-- /footer content -->
       </div>
     </div>
+    <!-- /page content -->
 
-    <!-- Bootstrap -->
-    <script src="http://formread.org/app/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <script src="http://formread.org/app/vendors/fastclick/lib/fastclick.js"></script>
-    <!-- NProgress -->
-    <script src="http://formread.org/app/vendors/nprogress/nprogress.js"></script>
-    <!-- bootstrap-progressbar -->
-    <script src="http://formread.org/app/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-    <!-- iCheck -->
-    <script src="http://formread.org/app/vendors/iCheck/icheck.min.js"></script>
-    <!-- bootstrap-daterangepicker -->
-    <script src="http://formread.org/app/vendors/moment/min/moment.min.js"></script>
-    <script src="http://formread.org/app/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <!-- bootstrap-wysiwyg -->
-    <script src="http://formread.org/app/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-    <script src="http://formread.org/app/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="http://formread.org/app/vendors/google-code-prettify/src/prettify.js"></script>
-    <!-- jQuery Tags Input -->
-    <script src="http://formread.org/app/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-    <!-- Switchery -->
-    <script src="http://formread.org/app/vendors/switchery/dist/switchery.min.js"></script>
-    <!-- Select2 -->
-    <script src="http://formread.org/app/vendors/select2/dist/js/select2.full.min.js"></script>
-    <!-- Parsley -->
-    <script src="http://formread.org/app/vendors/parsleyjs/dist/parsley.min.js"></script>
-    <!-- Autosize -->
-    <script src="http://formread.org/app/vendors/autosize/dist/autosize.min.js"></script>
-    <!-- starrr -->
-    <script src="http://formread.org/app/vendors/starrr/dist/starrr.js"></script>
+    <!-- footer content -->
+    <!-- /footer content -->
+  </div>
+</div>
 
-    <!-- Custom Theme Scripts -->
-    <script src="http://formread.org/app/build/js/custom.min.js"></script>
+<!-- Bootstrap -->
+<script src="http://formread.org/app/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- FastClick -->
+<script src="http://formread.org/app/vendors/fastclick/lib/fastclick.js"></script>
+<!-- NProgress -->
+<script src="http://formread.org/app/vendors/nprogress/nprogress.js"></script>
+<!-- bootstrap-progressbar -->
+<script src="http://formread.org/app/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+<!-- iCheck -->
+<script src="http://formread.org/app/vendors/iCheck/icheck.min.js"></script>
+<!-- bootstrap-daterangepicker -->
+<script src="http://formread.org/app/vendors/moment/min/moment.min.js"></script>
+<script src="http://formread.org/app/vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap-wysiwyg -->
+<script src="http://formread.org/app/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+<script src="http://formread.org/app/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+<script src="http://formread.org/app/vendors/google-code-prettify/src/prettify.js"></script>
+<!-- jQuery Tags Input -->
+<script src="http://formread.org/app/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+<!-- Switchery -->
+<script src="http://formread.org/app/vendors/switchery/dist/switchery.min.js"></script>
+<!-- Select2 -->
+<script src="http://formread.org/app/vendors/select2/dist/js/select2.full.min.js"></script>
+<!-- Parsley -->
+<script src="http://formread.org/app/vendors/parsleyjs/dist/parsley.min.js"></script>
+<!-- Autosize -->
+<script src="http://formread.org/app/vendors/autosize/dist/autosize.min.js"></script>
+<!-- starrr -->
+<script src="http://formread.org/app/vendors/starrr/dist/starrr.js"></script>
+
+<!-- Custom Theme Scripts -->
+<script src="http://formread.org/app/build/js/custom.min.js"></script>
 
 
-    
-    <!-- bootstrap-daterangepicker -->
-    <script>
-      $(document).ready(function() {
-        $('#birthday').daterangepicker({
-          singleDatePicker: true,
-          calender_style: "picker_4"
-        }, function(start, end, label) {
-          console.log(start.toISOString(), end.toISOString(), label);
-        });
+
+<!-- bootstrap-daterangepicker -->
+<script>
+  $(document).ready(function() {
+    $('#birthday').daterangepicker({
+      singleDatePicker: true,
+      calender_style: "picker_4"
+    }, function(start, end, label) {
+      console.log(start.toISOString(), end.toISOString(), label);
+    });
+  });
+</script>
+<!-- /bootstrap-daterangepicker -->
+
+<!-- bootstrap-wysiwyg -->
+<script>
+  $(document).ready(function() {
+    function initToolbarBootstrapBindings() {
+      var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
+      'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
+      'Times New Roman', 'Verdana'
+      ],
+      fontTarget = $('[title=Font]').siblings('.dropdown-menu');
+      $.each(fonts, function(idx, fontName) {
+        fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
       });
-    </script>
-    <!-- /bootstrap-daterangepicker -->
-
-    <!-- bootstrap-wysiwyg -->
-    <script>
-      $(document).ready(function() {
-        function initToolbarBootstrapBindings() {
-          var fonts = ['Serif', 'Sans', 'Arial', 'Arial Black', 'Courier',
-              'Courier New', 'Comic Sans MS', 'Helvetica', 'Impact', 'Lucida Grande', 'Lucida Sans', 'Tahoma', 'Times',
-              'Times New Roman', 'Verdana'
-            ],
-            fontTarget = $('[title=Font]').siblings('.dropdown-menu');
-          $.each(fonts, function(idx, fontName) {
-            fontTarget.append($('<li><a data-edit="fontName ' + fontName + '" style="font-family:\'' + fontName + '\'">' + fontName + '</a></li>'));
-          });
-          $('a[title]').tooltip({
-            container: 'body'
-          });
-          $('.dropdown-menu input').click(function() {
-              return false;
-            })
-            .change(function() {
-              $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
-            })
-            .keydown('esc', function() {
-              this.value = '';
-              $(this).change();
-            });
-
-          $('[data-role=magic-overlay]').each(function() {
-            var overlay = $(this),
-              target = $(overlay.data('target'));
-            overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
-          });
-
-          if ("onwebkitspeechchange" in document.createElement("input")) {
-            var editorOffset = $('#editor').offset();
-
-            $('.voiceBtn').css('position', 'absolute').offset({
-              top: editorOffset.top,
-              left: editorOffset.left + $('#editor').innerWidth() - 35
-            });
-          } else {
-            $('.voiceBtn').hide();
-          }
-        }
-
-        function showErrorAlert(reason, detail) {
-          var msg = '';
-          if (reason === 'unsupported-file-type') {
-            msg = "Unsupported format " + detail;
-          } else {
-            console.log("error uploading file", reason, detail);
-          }
-          $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
-            '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
-        }
-
-        initToolbarBootstrapBindings();
-
-        $('#editor').wysiwyg({
-          fileUploadError: showErrorAlert
-        });
-
-        window.prettyPrint;
-        prettyPrint();
+      $('a[title]').tooltip({
+        container: 'body'
       });
-    </script>
-    <!-- /bootstrap-wysiwyg -->
-
-    <!-- Select2 -->
-    <script>
-      $(document).ready(function() {
-        $(".select2_single").select2({
-          placeholder: "Select a state",
-          allowClear: true
-        });
-        $(".select2_group").select2({});
-        $(".select2_multiple").select2({
-          maximumSelectionLength: 4,
-          placeholder: "With Max Selection limit 4",
-          allowClear: true
-        });
+      $('.dropdown-menu input').click(function() {
+        return false;
+      })
+      .change(function() {
+        $(this).parent('.dropdown-menu').siblings('.dropdown-toggle').dropdown('toggle');
+      })
+      .keydown('esc', function() {
+        this.value = '';
+        $(this).change();
       });
-    </script>
-    <!-- /Select2 -->
 
-    <!-- jQuery Tags Input -->
-    <script>
-      function onAddTag(tag) {
-        alert("Added a tag: " + tag);
+      $('[data-role=magic-overlay]').each(function() {
+        var overlay = $(this),
+        target = $(overlay.data('target'));
+        overlay.css('opacity', 0).css('position', 'absolute').offset(target.offset()).width(target.outerWidth()).height(target.outerHeight());
+      });
+
+      if ("onwebkitspeechchange" in document.createElement("input")) {
+        var editorOffset = $('#editor').offset();
+
+        $('.voiceBtn').css('position', 'absolute').offset({
+          top: editorOffset.top,
+          left: editorOffset.left + $('#editor').innerWidth() - 35
+        });
+      } else {
+        $('.voiceBtn').hide();
       }
+    }
 
-      function onRemoveTag(tag) {
-        alert("Removed a tag: " + tag);
+    function showErrorAlert(reason, detail) {
+      var msg = '';
+      if (reason === 'unsupported-file-type') {
+        msg = "Unsupported format " + detail;
+      } else {
+        console.log("error uploading file", reason, detail);
       }
+      $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
+        '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
+    }
 
-      function onChangeTag(input, tag) {
-        alert("Changed a tag: " + tag);
+    initToolbarBootstrapBindings();
+
+    $('#editor').wysiwyg({
+      fileUploadError: showErrorAlert
+    });
+
+    window.prettyPrint;
+    prettyPrint();
+  });
+</script>
+<!-- /bootstrap-wysiwyg -->
+
+<!-- Select2 -->
+<script>
+  $(document).ready(function() {
+    $(".select2_single").select2({
+      placeholder: "Select a state",
+      allowClear: true
+    });
+    $(".select2_group").select2({});
+    $(".select2_multiple").select2({
+      maximumSelectionLength: 4,
+      placeholder: "With Max Selection limit 4",
+      allowClear: true
+    });
+  });
+</script>
+<!-- /Select2 -->
+
+<!-- jQuery Tags Input -->
+<script>
+  function onAddTag(tag) {
+    alert("Added a tag: " + tag);
+  }
+
+  function onRemoveTag(tag) {
+    alert("Removed a tag: " + tag);
+  }
+
+  function onChangeTag(input, tag) {
+    alert("Changed a tag: " + tag);
+  }
+
+  $(document).ready(function() {
+    $('#tags_1').tagsInput({
+      width: 'auto'
+    });
+  });
+</script>
+<!-- /jQuery Tags Input -->
+
+<!-- Parsley -->
+<script>
+  $(document).ready(function() {
+    $.listen('parsley:field:validate', function() {
+      validateFront();
+    });
+    $('#demo-form .btn').on('click', function() {
+      $('#demo-form').parsley().validate();
+      validateFront();
+    });
+    var validateFront = function() {
+      if (true === $('#demo-form').parsley().isValid()) {
+        $('.bs-callout-info').removeClass('hidden');
+        $('.bs-callout-warning').addClass('hidden');
+      } else {
+        $('.bs-callout-info').addClass('hidden');
+        $('.bs-callout-warning').removeClass('hidden');
       }
+    };
+  });
 
-      $(document).ready(function() {
-        $('#tags_1').tagsInput({
-          width: 'auto'
-        });
-      });
-    </script>
-    <!-- /jQuery Tags Input -->
+  $(document).ready(function() {
+    $.listen('parsley:field:validate', function() {
+      validateFront();
+    });
+    $('#demo-form2 .btn').on('click', function() {
+      $('#demo-form2').parsley().validate();
+      validateFront();
+    });
+    var validateFront = function() {
+      if (true === $('#demo-form2').parsley().isValid()) {
+        $('.bs-callout-info').removeClass('hidden');
+        $('.bs-callout-warning').addClass('hidden');
+      } else {
+        $('.bs-callout-info').addClass('hidden');
+        $('.bs-callout-warning').removeClass('hidden');
+      }
+    };
+  });
+  try {
+    hljs.initHighlightingOnLoad();
+  } catch (err) {}
+</script>
+<!-- /Parsley -->
 
-    <!-- Parsley -->
-    <script>
-      $(document).ready(function() {
-        $.listen('parsley:field:validate', function() {
-          validateFront();
-        });
-        $('#demo-form .btn').on('click', function() {
-          $('#demo-form').parsley().validate();
-          validateFront();
-        });
-        var validateFront = function() {
-          if (true === $('#demo-form').parsley().isValid()) {
-            $('.bs-callout-info').removeClass('hidden');
-            $('.bs-callout-warning').addClass('hidden');
-          } else {
-            $('.bs-callout-info').addClass('hidden');
-            $('.bs-callout-warning').removeClass('hidden');
-          }
-        };
-      });
+<!-- Autosize -->
+<script>
+  $(document).ready(function() {
+    autosize($('.resizable_textarea'));
+  });
+</script>
+<!-- /Autosize -->
 
-      $(document).ready(function() {
-        $.listen('parsley:field:validate', function() {
-          validateFront();
-        });
-        $('#demo-form2 .btn').on('click', function() {
-          $('#demo-form2').parsley().validate();
-          validateFront();
-        });
-        var validateFront = function() {
-          if (true === $('#demo-form2').parsley().isValid()) {
-            $('.bs-callout-info').removeClass('hidden');
-            $('.bs-callout-warning').addClass('hidden');
-          } else {
-            $('.bs-callout-info').addClass('hidden');
-            $('.bs-callout-warning').removeClass('hidden');
-          }
-        };
-      });
-      try {
-        hljs.initHighlightingOnLoad();
-      } catch (err) {}
-    </script>
-    <!-- /Parsley -->
+<!-- Starrr -->
+<script>
+  $(document).ready(function() {
+    $(".stars").starrr();
 
-    <!-- Autosize -->
-    <script>
-      $(document).ready(function() {
-        autosize($('.resizable_textarea'));
-      });
-    </script>
-    <!-- /Autosize -->
+    $('.stars-existing').starrr({
+      rating: 4
+    });
 
-    <!-- Starrr -->
-    <script>
-      $(document).ready(function() {
-        $(".stars").starrr();
+    $('.stars').on('starrr:change', function (e, value) {
+      $('.stars-count').html(value);
+    });
 
-        $('.stars-existing').starrr({
-          rating: 4
-        });
-
-        $('.stars').on('starrr:change', function (e, value) {
-          $('.stars-count').html(value);
-        });
-
-        $('.stars-existing').on('starrr:change', function (e, value) {
-          $('.stars-count-existing').html(value);
-        });
-      });
-    </script>
-            <!-- /Starrr -->
-  </body>
+    $('.stars-existing').on('starrr:change', function (e, value) {
+      $('.stars-count-existing').html(value);
+    });
+  });
+</script>
+<!-- /Starrr -->
+</body>
 </html>
