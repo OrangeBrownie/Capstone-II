@@ -74,144 +74,108 @@
 										<h3>Web Application Scanner</h3>		                        		
 									</h3>
 								</div>
-								<div class="tab-content">
-									<h3 class="info-text">1. Download the OCR Language</h3>
+								<div class="content">									
 									<br>
 									<br>
-									<div class="tab-pane" id="formType">
-										<div class="row">
-											<div class="col-sm-10 col-sm-offset-1">
-												<div class="col-sm-4">
-													<button class='btn btn-fill btn-success btn-wd' onclick="recognizeFile('examples/node/cosmic.png')">Download OCR Language</button>
-												</div>
-												<div class="col-sm-6">
-													<div id="log"></div>
-												</div>												
-											</div>
-										</div>
-										<br>
-										<br>
-										<div class="wizard-navigation">
-											<ul>
-												<li><a href="#formType" data-toggle="tab">Please fill up the provided form.</a></li>
-											</ul>
-										</div>
-										<br>
-										<br>
-										<div class="row">
-											<div class="col-sm-12">
-											</div>
-											<div class="col-sm-6">
-												<div class="input-group">
-													<span class="input-group-addon">
-														<i class="material-icons">account_circle</i>
-													</span>
-													<div class="form-group label-floating">
-														<label class="control-label">Instructor</label>
-														<input name="name" type="text" class="form-control" required="">
-													</div>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-6">
-												<div class="input-group">
-													<span class="input-group-addon">
-														<i class="material-icons">calendar_today</i>
-													</span>
-													<div class="form-group label-floating">
-														<label class="control-label">School Year</label>
-														<input name="name" type="text" class="form-control" required="">
-													</div>
-												</div>
-												<div class="input-group">
-													<span class="input-group-addon">
-														<i class="material-icons">subject</i>
-													</span>
-													<div class="form-group label-floating">
-														<label class="control-label">Subject Code</label>
-														<input name="name" type="text" class="form-control" required="">
-													</div>
-												</div>
-											</div>
-											<div class="col-sm-6">
-												<div class="input-group">
-													<span class="input-group-addon">
-														<i class="material-icons">bookmarks</i>
-													</span>
-													<div class="form-group label-floating">
-														<label class="control-label">Semester</label>
-														<select class="form-control" required="">
-															<option disabled="" selected=""></option>
-															<option value="1"> First Semester </option>
-															<option value="2"> Second Semester </option>
-														</select>
-													</div>
-												</div>
-												<div class="input-group">
-													<span class="input-group-addon">
-														<i class="material-icons">schedule</i>
-													</span>
-													<div class="form-group label-floating">
-														<label class="control-label">Time/Day</label>
-														<input type="text" class="form-control datetimepicker" value="10/13/2019" required="">
-													</div>
-												</div>
-											</div>
-										</div>
-										<br>
-										<br>
-										<div class="wizard-navigation">
-											<ul>
-												<li><a href="#formType" data-toggle="tab"><h3 class="info-text"> Upload the scanned TER Forms.</h3></a></li>
-											</ul>
-										</div>
-										<br>
-										<br>
-										<div class="row">
-											<h3 class="info-text"> Upload the scanned TER Forms.</h3>
+									<div class="row">
+										<h3 class="info-text">1. Download the OCR Language</h3>
+										<div class="col-sm-10 col-sm-offset-1">
 											<div class="col-sm-4">
-												<div class="picture-container">
-													<div class="picture">
-														<img src="assets/img/tim-logo.png" class="picture-src" id="wizardPicturePreview" title="" />
-														<input id="file_input" type="file" accept=".png, .jpg, .jpeg, .pdf" required="">
-													</div>
-													<h6 class="description">UPLOAD FILE</h6>
-												</div>
+												<button class='btn btn-fill btn-success btn-wd' onclick="recognizeFile('examples/node/cosmic.png')">Download OCR Language</button>
 											</div>
-											<div class="col-sm-8">
-												<div class="form-group">
-													<label class="control-label">Example</label>
-													<p class="description">"The room really nice name is recognized as being a really awesome room. We use it every sunday when we go fishing and we catch a lot. It has some kind of magic shield around it."</p>
+											<div class="col-sm-6">
+												<div id="log"></div>
+											</div>												
+										</div>
+									</div>									
+									<br>
+									<br>
+									<div class="row">
+										<h3 class="info-text">2. Fill up the provided form</h3>
+										<div class="col-sm-12">
+										</div>
+										<div class="col-sm-6">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="material-icons">account_circle</i>
+												</span>
+												<div class="form-group label-floating">
+													<label class="control-label">Instructor</label>
+													<input name="name" type="text" class="form-control" required="">
 												</div>
 											</div>
 										</div>
 									</div>
-									<div class="tab-pane" id="uploadImage">
-										<div class="row">
-											<h3 class="info-text"> Upload the scanned TER Forms.</h3>
-											<div class="col-sm-4">
-												<div class="picture-container">
-													<div class="picture">
-														<img src="assets/img/tim-logo.png" class="picture-src" id="wizardPicturePreview" title="" />
-														<input id="file_input" type="file" accept=".png, .jpg, .jpeg, .pdf" required="">
-													</div>
-													<h6 class="description">UPLOAD FILE</h6>
+									<div class="row">
+										<div class="col-sm-6">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="material-icons">calendar_today</i>
+												</span>
+												<div class="form-group label-floating">
+													<label class="control-label">School Year</label>
+													<input name="name" type="text" class="form-control" required="">
 												</div>
 											</div>
-											<div class="col-sm-8">
-												<div class="form-group">
-													<label class="control-label">Example</label>
-													<p class="description">"The room really nice name is recognized as being a really awesome room. We use it every sunday when we go fishing and we catch a lot. It has some kind of magic shield around it."</p>
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="material-icons">subject</i>
+												</span>
+												<div class="form-group label-floating">
+													<label class="control-label">Subject Code</label>
+													<input name="name" type="text" class="form-control" required="">
 												</div>
 											</div>
 										</div>
+										<div class="col-sm-6">
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="material-icons">bookmarks</i>
+												</span>
+												<div class="form-group label-floating">
+													<label class="control-label">Semester</label>
+													<select class="form-control" required="">
+														<option disabled="" selected=""></option>
+														<option value="1"> First Semester </option>
+														<option value="2"> Second Semester </option>
+													</select>
+												</div>
+											</div>
+											<div class="input-group">
+												<span class="input-group-addon">
+													<i class="material-icons">schedule</i>
+												</span>
+												<div class="form-group label-floating">
+													<label class="control-label">Time/Day</label>
+													<input type="text" class="form-control datetimepicker" value="10/13/2019" required="">
+												</div>
+											</div>
+										</div>
+									</div>
+									<br>
+									<br>
+									<div class="row">
+										<h3 class="info-text">3. Upload the scanned TER Forms</h3>
+										<div class="col-sm-4">
+											<div class="picture-container">
+												<div class="picture">
+													<img src="assets/img/tim-logo.png" class="picture-src" id="wizardPicturePreview" title="" />
+													<input id="file_input" type="file" accept=".png, .jpg, .jpeg, .pdf" required="">
+												</div>
+												<h6 class="description">UPLOAD FILE</h6>
+											</div>
+										</div>
+										<div class="col-sm-8">
+											<div class="form-group">
+												<label class="control-label">Example</label>
+												<p class="description">"The room really nice name is recognized as being a really awesome room. We use it every sunday when we go fishing and we catch a lot. It has some kind of magic shield around it."</p>
+											</div>
+										</div>
+										<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
 									</div>
 								</div>
 								<div class="wizard-footer">
 									<div class="pull-right">
-										<input type='button' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
-										<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />
 									</div>
 									<div class="clearfix"></div>
 								</div>
@@ -280,7 +244,7 @@
 					}
 					if(packet.status == 'done'){
 						var pre = document.createElement('pre')
-						pre.appendChild(document.createTextNode('Laguange installed'))
+						pre.appendChild(document.createTextNode('Languange installed'))
 						line.innerHTML = ''
 						line.appendChild(pre)
 					}
